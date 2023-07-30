@@ -29,6 +29,8 @@ namespace Effekseer.Data.Value
 			get { return GetValueAsInt() != GetDefaultValueAsInt(); }
 		}
 
+		public T[] AvailableList { get; set; }
+
 		internal Enum(T value = default(T))
 		{
 			_value = value;
@@ -97,6 +99,16 @@ namespace Effekseer.Data.Value
 		public override Type GetEnumType()
 		{
 			return typeof(T);
+		}
+
+		public override bool IsAvailable(int value)
+		{
+			if (AvailableList == null)
+			{
+				return true;
+			}
+			object v = value;
+			return AvailableList.Contains((T)v);
 		}
 
 		public static implicit operator T(Enum<T> value)

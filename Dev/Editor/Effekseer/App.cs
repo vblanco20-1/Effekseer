@@ -49,15 +49,14 @@ namespace Effekseer
 				typeof(Dock.Profiler),
 			};
 
-			System.OperatingSystem os = System.Environment.OSVersion;
-			deviceType = swig.DeviceType.DirectX11;
-
-			if (!(os.Platform == PlatformID.Win32NT ||
-			os.Platform == PlatformID.Win32S ||
-			os.Platform == PlatformID.Win32Windows ||
-			os.Platform == PlatformID.WinCE))
+			switch (Core.Option.GraphicsDevice.Value)
 			{
-				deviceType = swig.DeviceType.OpenGL;
+				case Data.GraphicsDevice.DirectX11:
+					deviceType = swig.DeviceType.DirectX11;
+					break;
+				case Data.GraphicsDevice.OpenGL3:
+					deviceType = swig.DeviceType.OpenGL;
+					break;
 			}
 
 			if (!GUI.Manager.Initialize(960, 540, deviceType, dockTypes))

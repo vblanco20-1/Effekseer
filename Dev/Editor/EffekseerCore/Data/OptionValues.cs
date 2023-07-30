@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml;
+using Effekseer.Data.Value;
 using Effekseer.Utils;
+using IronPython.Runtime;
+using static Community.CsharpSqlite.Sqlite3.WhereLevel._u;
+using static IronPython.Modules._ast;
 
 namespace Effekseer.Data
 {
@@ -25,6 +29,26 @@ namespace Effekseer.Data
 			var text = e.GetText();
 			LanguageTable.SelectLanguage(text);
 		}
+	}
+
+	public enum GraphicsDevice
+	{
+		[Name(value = "DirectX 9")]
+		DirectX9 = 0,
+		[Name(value = "DirectX 11")]
+		DirectX11 = 1,
+		[Name(value = "DirectX 12")]
+		DirectX12 = 2,
+		[Name(value = "OpenGL 2")]
+		OpenGL2 = 10,
+		[Name(value = "OpenGL 3")]
+		OpenGL3 = 11,
+		[Name(value = "OpenGL 4")]
+		OpenGL4 = 12,
+		[Name(value = "Vulkan")]
+		Vulkan = 20,
+		[Name(value = "Metal")]
+		Metal = 30,
 	}
 
 	public enum MouseMappingType
@@ -219,6 +243,14 @@ namespace Effekseer.Data
 			private set;
 		}
 
+		[Key(key = "Options_GraphicsDevice")]
+		[Undo(Undo = false)]
+		public Enum<GraphicsDevice> GraphicsDevice
+		{
+			get;
+			private set;
+		}
+
 		[Key(key = "Options_DistortionType")]
 		[Undo(Undo = false)]
 		public Value.Enum<DistortionMethodType> DistortionType
@@ -293,12 +325,14 @@ namespace Effekseer.Data
 
 			LanguageSelector = new LanguageSelector();
 
+			GraphicsDevice = new Value.Enum<GraphicsDevice>(Core.DefaultDevice);
+			GraphicsDevice.AvailableList = Core.SupportedDevices;
+
 			FileBrowserViewMode = new Value.Enum<FileViewMode>(FileViewMode.IconView);
 			FileBrowserIconSize = new Value.Int(96, 512, 48);
 			FloatFormatDigits =  new Value.Int(3, 9, 1);
 			AutoSaveIntervalMin = new Value.Int(2, 60, 0);
 		}
-		
 		
 		public string GetFloatFormat()
 		{

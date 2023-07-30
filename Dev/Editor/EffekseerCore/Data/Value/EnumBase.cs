@@ -11,6 +11,7 @@ namespace Effekseer.Data.Value
 		public abstract int GetDefaultValueAsInt();
 		public abstract void SetValue(int value);
 		public abstract void SetValueDirectly(int value);
+		public abstract bool IsAvailable(int value);
 		public event ChangedValueEventHandler OnChanged;
 
 		public abstract Type GetEnumType();

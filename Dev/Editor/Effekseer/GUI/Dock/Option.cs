@@ -50,6 +50,7 @@ namespace Effekseer.GUI.Dock
 				Core.Option.FontSize.OnChanged += FontSize_OnChanged;
 				Core.Option.Font.OnChanged += FontSize_OnChanged;
 				LanguageTable.OnLanguageChanged += RestartValue_OnChanged;
+				Core.Option.GraphicsDevice.OnChanged += RestartValue_OnChanged;
 			}
 
 			Manager.NativeManager.Separator();

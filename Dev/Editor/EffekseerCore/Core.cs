@@ -1608,5 +1608,44 @@ namespace Effekseer
 		{
 			return GetToolHelpURL() + "ToolReference/" + docPage;
 		}
+
+		public static GraphicsDevice DefaultDevice
+		{
+			get
+			{
+				var os = System.Environment.OSVersion;
+				if ((os.Platform == PlatformID.Win32NT ||
+					os.Platform == PlatformID.Win32S ||
+					os.Platform == PlatformID.Win32Windows ||
+					os.Platform == PlatformID.WinCE))
+				{
+					return GraphicsDevice.DirectX11;
+				}
+				return GraphicsDevice.OpenGL3;
+			}
+		}
+
+		public static GraphicsDevice[] SupportedDevices
+		{
+			get
+			{
+				if (_supportedDevices == null)
+				{
+					List<GraphicsDevice> list = new List<GraphicsDevice>();
+					var os = System.Environment.OSVersion;
+					if ((os.Platform == PlatformID.Win32NT ||
+						os.Platform == PlatformID.Win32S ||
+						os.Platform == PlatformID.Win32Windows ||
+						os.Platform == PlatformID.WinCE))
+					{
+						list.Add(GraphicsDevice.DirectX11);
+					}
+					list.Add(GraphicsDevice.OpenGL3);
+					_supportedDevices = list.ToArray();
+				}
+				return _supportedDevices;
+			}
+		}
+		private static GraphicsDevice[] _supportedDevices;
 	}
 }

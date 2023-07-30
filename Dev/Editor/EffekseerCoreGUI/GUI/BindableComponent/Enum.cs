@@ -139,6 +139,11 @@ namespace Effekseer.GUI.BindableComponent
 				{
 					bool is_selected = (FieldNames[v.Item2] == FieldNames[i]);
 
+					if (!Binding.IsAvailable(i))
+					{
+						continue;
+					}
+
 					if (Manager.NativeManager.Selectable(FieldNames[i].ToString(), is_selected, swig.SelectableFlags.None))
 					{
 						selectedValues = enums[i];
