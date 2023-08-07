@@ -129,6 +129,10 @@ void GraphicsGL::Resize(int32_t width, int32_t height)
 	glViewport(0, 0, this->windowWidth, this->windowHeight);
 }
 
+void GraphicsGL::NewFrame()
+{
+}
+
 bool GraphicsGL::Present()
 {
 	if (Presented != nullptr)
@@ -310,6 +314,14 @@ void GraphicsGL::ResolveRenderTarget(Effekseer::Backend::TextureRef src, Effekse
 
 void GraphicsGL::ResetDevice()
 {
+}
+
+Effekseer::Backend::RenderPassRef GraphicsGL::GetScreenRenderPass()
+{
+	//auto device = graphicsDevice_.DownCast<EffekseerRendererGL::Backend::GraphicsDevice>();
+	//auto renderPass = Effekseer::MakeRefPtr<EffekseerRendererGL::Backend::RenderPass>(device.Get());
+
+	return nullptr;
 }
 
 } // namespace efk

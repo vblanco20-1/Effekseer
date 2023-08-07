@@ -54,8 +54,20 @@ namespace Effekseer
 				case Data.GraphicsDevice.DirectX11:
 					deviceType = swig.DeviceType.DirectX11;
 					break;
+				case Data.GraphicsDevice.DirectX12:
+					deviceType = swig.DeviceType.DirectX12;
+					break;
 				case Data.GraphicsDevice.OpenGL3:
-					deviceType = swig.DeviceType.OpenGL;
+					deviceType = swig.DeviceType.OpenGL3;
+					break;
+				case Data.GraphicsDevice.OpenGL4:
+					deviceType = swig.DeviceType.OpenGL4;
+					break;
+				case Data.GraphicsDevice.Vulkan:
+					deviceType = swig.DeviceType.Vulkan;
+					break;
+				case Data.GraphicsDevice.Metal:
+					deviceType = swig.DeviceType.Metal;
 					break;
 			}
 

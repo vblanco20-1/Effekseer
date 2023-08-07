@@ -235,7 +235,7 @@ namespace Effekseer.GUI
 
 			state.IsFrameless = IsWindowFrameless;
 
-			if (!swig.MainWindow.Initialize("Effekseer", state, false, deviceType == swig.DeviceType.OpenGL))
+			if (!swig.MainWindow.Initialize("Effekseer", state, false, deviceType == swig.DeviceType.OpenGL3 || deviceType == swig.DeviceType.OpenGL4))
 			{
 				return false;
 			}
@@ -630,8 +630,9 @@ namespace Effekseer.GUI
 				isFontSizeDirtied = false;
 			}
 
-			// Reset
+			HardwareDevice.GraphicsDevice.NewFrame();
 
+			// Reset
 			NativeManager.ResetGUI();
 
 			IO.Update();

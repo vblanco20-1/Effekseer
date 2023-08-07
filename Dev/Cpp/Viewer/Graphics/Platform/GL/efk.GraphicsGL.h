@@ -35,6 +35,8 @@ public:
 
 	void Resize(int32_t width, int32_t height) override;
 
+	void NewFrame() override;
+
 	bool Present() override;
 
 	void SetRenderTarget(std::vector<Effekseer::Backend::TextureRef> renderTextures, Effekseer::Backend::TextureRef depthTexture) override;
@@ -47,9 +49,11 @@ public:
 
 	void ResetDevice() override;
 
+	Effekseer::Backend::RenderPassRef GetScreenRenderPass() override;
+
 	Effekseer::Tool::DeviceType GetDeviceType() const override
 	{
-		return Effekseer::Tool::DeviceType::OpenGL;
+		return Effekseer::Tool::DeviceType::OpenGL3;
 	}
 
 	Effekseer::RefPtr<Effekseer::Backend::GraphicsDevice> GetGraphicsDevice() override

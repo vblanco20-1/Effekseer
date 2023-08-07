@@ -3686,6 +3686,17 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Effekseerfswig_GraphicsDevice_ClearColor___(v
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_Effekseerfswig_GraphicsDevice_NewFrame___(void * jarg1) {
+  Effekseer::Tool::GraphicsDevice *arg1 = (Effekseer::Tool::GraphicsDevice *) 0 ;
+  std::shared_ptr< Effekseer::Tool::GraphicsDevice > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Effekseer::Tool::GraphicsDevice > *)jarg1;
+  arg1 = (Effekseer::Tool::GraphicsDevice *)(smartarg1 ? smartarg1->get() : 0); 
+  (arg1)->NewFrame();
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_Effekseerfswig_GraphicsDevice_Present___(void * jarg1) {
   Effekseer::Tool::GraphicsDevice *arg1 = (Effekseer::Tool::GraphicsDevice *) 0 ;
   std::shared_ptr< Effekseer::Tool::GraphicsDevice > *smartarg1 = 0 ;

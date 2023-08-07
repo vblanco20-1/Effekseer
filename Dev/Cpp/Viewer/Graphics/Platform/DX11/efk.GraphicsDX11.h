@@ -49,6 +49,8 @@ public:
 
 	void Resize(int32_t width, int32_t height) override;
 
+	void NewFrame() override;
+
 	bool Present() override;
 
 	void SetRenderTarget(std::vector<Effekseer::Backend::TextureRef> renderTextures, Effekseer::Backend::TextureRef depthTexture) override;
@@ -64,6 +66,8 @@ public:
 	int GetMultisampleLevel(Effekseer::Backend::TextureFormatType format) override;
 
 	void ResetDevice() override;
+
+	Effekseer::Backend::RenderPassRef GetScreenRenderPass() override;
 
 	ID3D11Device* GetDevice() const;
 

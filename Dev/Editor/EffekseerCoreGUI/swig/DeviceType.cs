@@ -12,7 +12,11 @@ namespace Effekseer.swig {
 
 public enum DeviceType {
   DirectX11,
-  OpenGL
+  DirectX12,
+  OpenGL3,
+  OpenGL4,
+  Vulkan,
+  Metal
 }
 
 }

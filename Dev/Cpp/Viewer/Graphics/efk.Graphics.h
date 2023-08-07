@@ -24,18 +24,17 @@ enum class TextureFeatureType
 class Graphics
 {
 public:
-	Graphics()
-	{
-	}
-	virtual ~Graphics()
-	{
-	}
+	Graphics() = default;
+
+	virtual ~Graphics() = default;
 
 	virtual bool Initialize(void* windowHandle, int32_t windowWidth, int32_t windowHeight) = 0;
 
 	virtual void CopyTo(Effekseer::Backend::TextureRef src, Effekseer::Backend::TextureRef dst) = 0;
 
 	virtual void Resize(int32_t width, int32_t height) = 0;
+
+	virtual void NewFrame() = 0;
 
 	virtual bool Present() = 0;
 
@@ -46,6 +45,8 @@ public:
 	virtual void Clear(Effekseer::Color color) = 0;
 
 	virtual void ResetDevice() = 0;
+
+	virtual Effekseer::Backend::RenderPassRef GetScreenRenderPass() = 0;
 
 	virtual Effekseer::Tool::DeviceType GetDeviceType() const = 0;
 

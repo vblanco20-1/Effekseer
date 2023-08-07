@@ -59,7 +59,7 @@ namespace Effekseer.GUI.Dock
 
 			Manager.Viewer.EffectRenderer.Render(Manager.MainViewImage);
 
-			if (deviceType == swig.DeviceType.OpenGL)
+			if (deviceType == swig.DeviceType.OpenGL3 || deviceType == swig.DeviceType.OpenGL4)
 			{
 				Manager.NativeManager.ImageData(Manager.MainViewImage, (int)contentSize.X, (int)contentSize.Y, 0, 1, 1, 0);
 			}

@@ -14,7 +14,11 @@ enum class CoordinateSystemType
 enum class DeviceType
 {
 	DirectX11,
-	OpenGL,
+	DirectX12,
+	OpenGL3,
+	OpenGL4,
+	Vulkan,
+	Metal,
 };
 
 enum class DistortionType : int32_t

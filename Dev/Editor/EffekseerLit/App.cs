@@ -33,7 +33,7 @@ namespace Effekseer
 			os.Platform == PlatformID.Win32Windows ||
 			os.Platform == PlatformID.WinCE))
 			{
-				deviceType = swig.DeviceType.OpenGL;
+				deviceType = swig.DeviceType.OpenGL3;
 			}
 
 			if (!GUI.Manager.Initialize(960, 540, deviceType, dockTypes))

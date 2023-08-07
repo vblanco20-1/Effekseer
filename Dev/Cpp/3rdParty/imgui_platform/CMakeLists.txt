@@ -9,14 +9,33 @@ set(srcs
     imgui_impl_opengl3_loader.h)
 
 if (WIN32)
-
 list(APPEND srcs
 	imgui_impl_dx11.cpp
 	imgui_impl_dx11.h
 )
-
-
 endif()
+
+if (BUILD_DX12)
+list(APPEND srcs
+	imgui_impl_dx12.cpp
+	imgui_impl_dx12.h
+)
+endif()
+
+if (BUILD_VULKAN)
+list(APPEND srcs
+	imgui_impl_vulkan.cpp
+	imgui_impl_vulkan.h
+)
+endif()
+
+if (BUILD_METAL)
+list(APPEND srcs
+	imgui_impl_metal.mm
+	imgui_impl_metal.h
+)
+endif()
+
 
 add_library(${PROJECT_NAME} STATIC ${srcs})
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

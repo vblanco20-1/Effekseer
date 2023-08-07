@@ -48,7 +48,7 @@ std::shared_ptr<EffectSetting> EffectSetting::Create(std::shared_ptr<Effekseer::
 		setting->SetMaterialLoader(EffekseerRendererDX11::CreateMaterialLoader(gd, fileInterface));
 #endif
 	}
-	else if (graphicsDevice->GetDeviceType() == DeviceType::OpenGL)
+	else if (graphicsDevice->GetDeviceType() == DeviceType::OpenGL3)
 	{
 		setting->SetMaterialLoader(EffekseerRendererGL::CreateMaterialLoader(gd, fileInterface));
 	}

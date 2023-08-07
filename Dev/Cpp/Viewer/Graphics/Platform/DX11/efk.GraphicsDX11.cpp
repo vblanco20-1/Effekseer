@@ -214,6 +214,10 @@ void GraphicsDX11::Resize(int32_t width, int32_t height)
 	ResetDevice();
 }
 
+void GraphicsDX11::NewFrame()
+{
+}
+
 bool GraphicsDX11::Present()
 {
 	swapChain->Present(1, 0);
@@ -466,6 +470,19 @@ void GraphicsDX11::ResetDevice()
 	currentRenderTargetViews.fill(nullptr);
 	currentRenderTargetViews[0] = renderTargetView;
 	currentDepthStencilView = depthStencilView;
+}
+
+Effekseer::Backend::RenderPassRef GraphicsDX11::GetScreenRenderPass()
+{
+	auto device = graphicsDevice_.DownCast<EffekseerRendererDX11::Backend::GraphicsDevice>();
+	auto renderPass = Effekseer::MakeRefPtr<EffekseerRendererDX11::Backend::RenderPass>(device.Get());
+
+	if (!renderPass->Init(renderTargetView, depthStencilView))
+	{
+		return nullptr;
+	}
+
+	return renderPass;
 }
 
 ID3D11Device* GraphicsDX11::GetDevice() const

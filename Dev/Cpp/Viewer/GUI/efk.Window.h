@@ -34,7 +34,7 @@ private:
 
 	GLFWwindow* window = nullptr;
 	bool isOpenGLMode = false;
-	Effekseer::Tool::DeviceType deviceType = Effekseer::Tool::DeviceType::OpenGL;
+	Effekseer::Tool::DeviceType deviceType = Effekseer::Tool::DeviceType::OpenGL3;
 	bool minimized = false;
 	bool maximized = false;
 

@@ -59,6 +59,11 @@ public class GraphicsDevice : global::System.IDisposable {
     if (EffekseerNativePINVOKE.SWIGPendingException.Pending) throw EffekseerNativePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void NewFrame() {
+    EffekseerNativePINVOKE.GraphicsDevice_NewFrame(swigCPtr);
+    if (EffekseerNativePINVOKE.SWIGPendingException.Pending) throw EffekseerNativePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public void Present() {
     EffekseerNativePINVOKE.GraphicsDevice_Present(swigCPtr);
     if (EffekseerNativePINVOKE.SWIGPendingException.Pending) throw EffekseerNativePINVOKE.SWIGPendingException.Retrieve();

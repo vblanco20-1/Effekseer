@@ -40,15 +40,15 @@ namespace Effekseer.Data
 		[Name(value = "DirectX 12")]
 		DirectX12 = 2,
 		[Name(value = "OpenGL 2")]
-		OpenGL2 = 10,
+		OpenGL2 = 3,
 		[Name(value = "OpenGL 3")]
-		OpenGL3 = 11,
+		OpenGL3 = 4,
 		[Name(value = "OpenGL 4")]
-		OpenGL4 = 12,
+		OpenGL4 = 5,
 		[Name(value = "Vulkan")]
-		Vulkan = 20,
+		Vulkan = 6,
 		[Name(value = "Metal")]
-		Metal = 30,
+		Metal = 7,
 	}
 
 	public enum MouseMappingType

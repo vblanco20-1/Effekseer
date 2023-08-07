@@ -1621,6 +1621,10 @@ namespace Effekseer
 				{
 					return GraphicsDevice.DirectX11;
 				}
+				if (os.Platform == PlatformID.MacOSX)
+				{
+					return GraphicsDevice.Metal;
+				}
 				return GraphicsDevice.OpenGL3;
 			}
 		}
@@ -1639,8 +1643,18 @@ namespace Effekseer
 						os.Platform == PlatformID.WinCE))
 					{
 						list.Add(GraphicsDevice.DirectX11);
+						list.Add(GraphicsDevice.DirectX12);
 					}
 					list.Add(GraphicsDevice.OpenGL3);
+					if (os.Platform == PlatformID.MacOSX)
+					{
+						list.Add(GraphicsDevice.Metal);
+					}
+					else
+					{
+						list.Add(GraphicsDevice.OpenGL4);
+						list.Add(GraphicsDevice.Vulkan);
+					}
 					_supportedDevices = list.ToArray();
 				}
 				return _supportedDevices;

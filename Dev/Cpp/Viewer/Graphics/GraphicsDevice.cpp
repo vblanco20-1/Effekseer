@@ -6,6 +6,8 @@
 #ifdef _WIN32
 #include "Platform/DX11/efk.GraphicsDX11.h"
 #endif
+
+#include "Platform/LLGI/efk.GraphicsLLGI.h"
 #include "Platform/GL/efk.GraphicsGL.h"
 
 namespace Effekseer::Tool
@@ -20,7 +22,7 @@ bool GraphicsDevice::Initialize(void* handle, int width, int height, bool isSRGB
 	// because internal buffer is 16bit
 	int32_t spriteCount = 65000 / 4;
 
-	if (deviceType == Effekseer::Tool::DeviceType::OpenGL)
+	if (deviceType == Effekseer::Tool::DeviceType::OpenGL3)
 	{
 		graphics_ = std::make_shared<efk::GraphicsGL>();
 	}
@@ -29,11 +31,17 @@ bool GraphicsDevice::Initialize(void* handle, int width, int height, bool isSRGB
 	{
 		graphics_ = std::make_shared<efk::GraphicsDX11>();
 	}
+#endif
+	else if (deviceType == Effekseer::Tool::DeviceType::DirectX12 ||
+		deviceType == Effekseer::Tool::DeviceType::Vulkan ||
+		deviceType == Effekseer::Tool::DeviceType::Metal)
+	{
+		graphics_ = std::make_shared<efk::GraphicsLLGI>(deviceType);
+	}
 	else
 	{
 		assert(0);
 	}
-#endif
 
 	spdlog::trace("OK new ::efk::Graphics");
 
@@ -61,6 +69,11 @@ void GraphicsDevice::ResetRenderTargets()
 void GraphicsDevice::ClearColor(uint8_t r, uint8_t g, uint8_t b, uint8_t a)
 {
 	graphics_->Clear({r, g, b, a});
+}
+
+void GraphicsDevice::NewFrame()
+{
+	graphics_->NewFrame();
 }
 
 void GraphicsDevice::Present()

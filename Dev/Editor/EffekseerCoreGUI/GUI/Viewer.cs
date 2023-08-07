@@ -263,7 +263,8 @@ namespace Effekseer.GUI
 			
 			ViewPointController = new swig.ViewPointController();
 
-			ViewPointController.ProjectionStyle = deviceType == swig.DeviceType.OpenGL ? swig.ProjectionMatrixStyle.OpenGLStyle : swig.ProjectionMatrixStyle.DirectXStyle;
+			ViewPointController.ProjectionStyle = deviceType == swig.DeviceType.OpenGL3 || deviceType == swig.DeviceType.OpenGL4 ? 
+				swig.ProjectionMatrixStyle.OpenGLStyle : swig.ProjectionMatrixStyle.DirectXStyle;
 
 			ViewMode_OnChanged(null, null);
 			Core.Option.ViewerMode.OnChanged += ViewMode_OnChanged;
