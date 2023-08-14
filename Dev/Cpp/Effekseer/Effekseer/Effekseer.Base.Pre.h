@@ -778,6 +778,17 @@ private:
 	size_t size_ = 0;
 
 public:
+	FixedSizeVector() = default;
+
+	FixedSizeVector(std::initializer_list<T> list)
+	{
+		assert(N >= list.size());
+		size_ = list.size();
+		for (size_t i = 0; i < size_; i++) {
+			internal_[i] = list.begin()[i];
+		}
+	}
+
 	T& at(size_t n)
 	{
 		assert(n < size_);

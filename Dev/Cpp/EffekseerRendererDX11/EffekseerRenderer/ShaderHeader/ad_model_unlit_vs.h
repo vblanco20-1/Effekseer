@@ -4,7 +4,8 @@
 //
 //
 //   fxc /Zpc /Tvs_4_0 /Emain /D __INST__=40 /Fh
-//    ShaderHeader/ad_model_unlit_vs.h Shader/ad_model_unlit_vs.fx
+//    EffekseerRenderer\ShaderHeader\ad_model_unlit_vs.h
+//    EffekseerRenderer\Shader\ad_model_unlit_vs.fx
 //
 //
 // Buffer Definitions: 
@@ -232,7 +233,7 @@ ret
 // Approximately 146 instruction slots used
 #endif
 
-const BYTE g_main[] =
+const uint8_t dx11_ad_model_unlit_vs[] =
 {
      68,  88,  66,  67,  82, 209, 
      89,  73,  10,  47, 203, 154, 

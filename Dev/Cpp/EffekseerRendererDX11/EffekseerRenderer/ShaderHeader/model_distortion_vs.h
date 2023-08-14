@@ -4,7 +4,8 @@
 //
 //
 //   fxc /Zpc /Tvs_4_0 /Emain /D __INST__=40 /Fh
-//    ShaderHeader/model_distortion_vs.h Shader/model_distortion_vs.fx
+//    EffekseerRenderer\ShaderHeader\model_distortion_vs.h
+//    EffekseerRenderer\Shader\model_distortion_vs.fx
 //
 //
 // Buffer Definitions: 
@@ -111,7 +112,7 @@ ret
 // Approximately 37 instruction slots used
 #endif
 
-const BYTE g_main[] =
+const uint8_t dx11_model_distortion_vs[] =
 {
      68,  88,  66,  67, 167,  25, 
     129, 213, 182, 136, 185,  30, 

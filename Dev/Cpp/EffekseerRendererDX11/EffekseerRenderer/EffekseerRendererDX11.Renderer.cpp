@@ -26,77 +26,21 @@
 namespace EffekseerRendererDX11
 {
 
-namespace Standard_VS_Ad
+namespace
 {
-static
-#include "ShaderHeader/ad_sprite_unlit_vs.h"
-} // namespace Standard_VS_Ad
-
-namespace Standard_PS_Ad
-{
-static
-#include "ShaderHeader/ad_model_unlit_ps.h"
-} // namespace Standard_PS_Ad
-
-namespace Standard_Distortion_VS_Ad
-{
-static
-#include "ShaderHeader/ad_sprite_distortion_vs.h"
-} // namespace Standard_Distortion_VS_Ad
-
-namespace Standard_Distortion_PS_Ad
-{
-static
 #include "ShaderHeader/ad_model_distortion_ps.h"
-} // namespace Standard_Distortion_PS_Ad
-
-namespace Standard_Lighting_VS_Ad
-{
-static
-#include "ShaderHeader/ad_sprite_lit_vs.h"
-} // namespace Standard_Lighting_VS_Ad
-
-namespace Standard_Lighting_PS_Ad
-{
-static
 #include "ShaderHeader/ad_model_lit_ps.h"
-} // namespace Standard_Lighting_PS_Ad
-
-namespace Standard_VS
-{
-static
-#include "ShaderHeader/sprite_unlit_vs.h"
-} // namespace Standard_VS
-
-namespace Standard_PS
-{
-static
-#include "ShaderHeader/model_unlit_ps.h"
-} // namespace Standard_PS
-
-namespace Standard_Distortion_VS
-{
-static
-#include "ShaderHeader/sprite_distortion_vs.h"
-} // namespace Standard_Distortion_VS
-
-namespace Standard_Distortion_PS
-{
-static
+#include "ShaderHeader/ad_model_unlit_ps.h"
+#include "ShaderHeader/ad_sprite_distortion_vs.h"
+#include "ShaderHeader/ad_sprite_lit_vs.h"
+#include "ShaderHeader/ad_sprite_unlit_vs.h"
 #include "ShaderHeader/model_distortion_ps.h"
-} // namespace Standard_Distortion_PS
-
-namespace Standard_Lighting_VS
-{
-static
-#include "ShaderHeader/sprite_lit_vs.h"
-} // namespace Standard_Lighting_VS
-
-namespace Standard_Lighting_PS
-{
-static
 #include "ShaderHeader/model_lit_ps.h"
-} // namespace Standard_Lighting_PS
+#include "ShaderHeader/model_unlit_ps.h"
+#include "ShaderHeader/sprite_distortion_vs.h"
+#include "ShaderHeader/sprite_lit_vs.h"
+#include "ShaderHeader/sprite_unlit_vs.h"
+} // namespace
 
 //-----------------------------------------------------------------------------------
 //
@@ -361,77 +305,59 @@ bool RendererImplemented::Initialize(Backend::GraphicsDeviceRef graphicsDevice,
 	auto vlLitAd = EffekseerRenderer::GetVertexLayout(graphicsDevice_, EffekseerRenderer::RendererShaderType::AdvancedLit).DownCast<Backend::VertexLayout>();
 	auto vlDistAd = EffekseerRenderer::GetVertexLayout(graphicsDevice_, EffekseerRenderer::RendererShaderType::AdvancedBackDistortion).DownCast<Backend::VertexLayout>();
 
-	auto shader_unlit = Shader::Create(graphicsDevice_,
-									   graphicsDevice_->CreateShaderFromBinary(
-										   Standard_VS::g_main,
-										   sizeof(Standard_VS::g_main),
-										   Standard_PS::g_main,
-										   sizeof(Standard_PS::g_main)),
-									   vlUnlit,
-									   "Unlit");
+	std::unique_ptr<Shader> shader_unlit = Shader::Create(
+		graphicsDevice_,
+		graphicsDevice_->CreateShaderFromBinary(
+			dx11_sprite_unlit_vs, sizeof(dx11_sprite_unlit_vs), dx11_model_unlit_ps, sizeof(dx11_model_unlit_ps)),
+		vlUnlit,
+		"Unlit");
 	if (shader_unlit == nullptr)
 		return false;
-	GetImpl()->ShaderUnlit = std::unique_ptr<EffekseerRenderer::ShaderBase>(shader_unlit);
 
-	auto shader_ad_unlit = Shader::Create(graphicsDevice_,
-										  graphicsDevice_->CreateShaderFromBinary(
-											  Standard_VS_Ad::g_main,
-											  sizeof(Standard_VS_Ad::g_main),
-											  Standard_PS_Ad::g_main,
-											  sizeof(Standard_PS_Ad::g_main)),
-										  vlUnlitAd,
-										  "Unlit Ad");
+	std::unique_ptr<Shader> shader_ad_unlit = Shader::Create(
+		graphicsDevice_,
+		graphicsDevice_->CreateShaderFromBinary(
+			dx11_ad_sprite_unlit_vs, sizeof(dx11_ad_sprite_unlit_vs), dx11_ad_model_unlit_ps, sizeof(dx11_ad_model_unlit_ps)),
+		vlUnlitAd,
+		"Unlit Ad");
 	if (shader_ad_unlit == nullptr)
 		return false;
-	GetImpl()->ShaderAdUnlit = std::unique_ptr<EffekseerRenderer::ShaderBase>(shader_ad_unlit);
 
-	auto shader_distortion = Shader::Create(graphicsDevice_,
-											graphicsDevice_->CreateShaderFromBinary(
-												Standard_Distortion_VS::g_main,
-												sizeof(Standard_Distortion_VS::g_main),
-												Standard_Distortion_PS::g_main,
-												sizeof(Standard_Distortion_PS::g_main)),
-											vlDist,
-											"Distortion");
+	std::unique_ptr<Shader> shader_distortion = Shader::Create(
+		graphicsDevice_,
+		graphicsDevice_->CreateShaderFromBinary(
+			dx11_sprite_distortion_vs, sizeof(dx11_sprite_distortion_vs), dx11_model_distortion_ps, sizeof(dx11_model_distortion_ps)),
+		vlDist,
+		"Distortion");
 	if (shader_distortion == nullptr)
 		return false;
-	GetImpl()->ShaderDistortion = std::unique_ptr<EffekseerRenderer::ShaderBase>(shader_distortion);
 
-	auto shader_ad_distortion = Shader::Create(graphicsDevice_,
-											   graphicsDevice_->CreateShaderFromBinary(
-												   Standard_Distortion_VS_Ad::g_main,
-												   sizeof(Standard_Distortion_VS_Ad::g_main),
-												   Standard_Distortion_PS_Ad::g_main,
-												   sizeof(Standard_Distortion_PS_Ad::g_main)),
-											   vlDistAd,
-											   "Distortion Ad");
+	std::unique_ptr<Shader> shader_ad_distortion = Shader::Create(
+		graphicsDevice_,
+		graphicsDevice_->CreateShaderFromBinary(
+			dx11_ad_sprite_distortion_vs, sizeof(dx11_ad_sprite_distortion_vs), dx11_ad_model_distortion_ps, sizeof(dx11_ad_model_distortion_ps)),
+		vlDistAd,
+		"Distortion Ad");
 	if (shader_ad_distortion == nullptr)
 		return false;
-	GetImpl()->ShaderAdDistortion = std::unique_ptr<EffekseerRenderer::ShaderBase>(shader_ad_distortion);
 
-	auto shader_lit = Shader::Create(graphicsDevice_,
-									 graphicsDevice_->CreateShaderFromBinary(
-										 Standard_Lighting_VS::g_main,
-										 sizeof(Standard_Lighting_VS::g_main),
-										 Standard_Lighting_PS::g_main,
-										 sizeof(Standard_Lighting_PS::g_main)),
-									 vlLit,
-									 "Lit");
+	std::unique_ptr<Shader> shader_lit = Shader::Create(
+		graphicsDevice_,
+		graphicsDevice_->CreateShaderFromBinary(
+			dx11_sprite_lit_vs, sizeof(dx11_sprite_lit_vs), dx11_model_lit_ps, sizeof(dx11_model_lit_ps)),
+		vlLit,
+		"Lit");
 	if (shader_lit == nullptr)
 		return false;
-	GetImpl()->ShaderLit = std::unique_ptr<EffekseerRenderer::ShaderBase>(shader_lit);
 
-	auto shader_ad_lit = Shader::Create(graphicsDevice_,
-										graphicsDevice_->CreateShaderFromBinary(
-											Standard_Lighting_VS_Ad::g_main,
-											sizeof(Standard_Lighting_VS_Ad::g_main),
-											Standard_Lighting_PS_Ad::g_main,
-											sizeof(Standard_Lighting_PS_Ad::g_main)),
-										vlLitAd,
-										"Lit Ad");
+	std::unique_ptr<Shader> shader_ad_lit = Shader::Create(
+		graphicsDevice_,
+		graphicsDevice_->CreateShaderFromBinary(
+			dx11_ad_sprite_lit_vs, sizeof(dx11_ad_sprite_lit_vs), dx11_ad_model_lit_ps, sizeof(dx11_ad_model_lit_ps)),
+		vlLitAd,
+		"Lit Ad");
 	if (shader_ad_lit == nullptr)
 		return false;
-	GetImpl()->ShaderAdLit = std::unique_ptr<EffekseerRenderer::ShaderBase>(shader_ad_lit);
 
 	shader_unlit->SetVertexConstantBufferSize(sizeof(EffekseerRenderer::StandardRendererVertexBuffer));
 	shader_unlit->SetPixelConstantBufferSize(sizeof(EffekseerRenderer::PixelConstantBuffer));
@@ -453,6 +379,13 @@ bool RendererImplemented::Initialize(Backend::GraphicsDeviceRef graphicsDevice,
 
 	m_standardRenderer =
 		new EffekseerRenderer::StandardRenderer<RendererImplemented, Shader>(this);
+
+	GetImpl()->ShaderUnlit = std::move(shader_unlit);
+	GetImpl()->ShaderAdUnlit = std::move(shader_ad_unlit);
+	GetImpl()->ShaderDistortion = std::move(shader_distortion);
+	GetImpl()->ShaderAdDistortion = std::move(shader_ad_distortion);
+	GetImpl()->ShaderLit = std::move(shader_lit);
+	GetImpl()->ShaderAdLit = std::move(shader_ad_lit);
 
 	GetImpl()->CreateProxyTextures(this);
 	GetImpl()->isSoftParticleEnabled = true;

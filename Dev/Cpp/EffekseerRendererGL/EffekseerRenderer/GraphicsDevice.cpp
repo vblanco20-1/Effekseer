@@ -1028,7 +1028,7 @@ RenderPass::~RenderPass()
 	ES_SAFE_RELEASE(graphicsDevice_);
 }
 
-bool RenderPass::Init(Effekseer::FixedSizeVector<Effekseer::Backend::TextureRef, Effekseer::Backend::RenderTargetMax>& textures, Effekseer::Backend::TextureRef depthTexture)
+bool RenderPass::Init(Effekseer::FixedSizeVector<Effekseer::Backend::TextureRef, Effekseer::Backend::RenderTargetMax> textures, Effekseer::Backend::TextureRef depthTexture)
 {
 	for (int32_t i = 0; i < textures.size(); i++)
 	{
@@ -1352,7 +1352,7 @@ Effekseer::Backend::VertexLayoutRef GraphicsDevice::CreateVertexLayout(const Eff
 	return ret;
 }
 
-Effekseer::Backend::RenderPassRef GraphicsDevice::CreateRenderPass(Effekseer::FixedSizeVector<Effekseer::Backend::TextureRef, Effekseer::Backend::RenderTargetMax>& textures, Effekseer::Backend::TextureRef& depthTexture)
+Effekseer::Backend::RenderPassRef GraphicsDevice::CreateRenderPass(Effekseer::FixedSizeVector<Effekseer::Backend::TextureRef, Effekseer::Backend::RenderTargetMax> textures, Effekseer::Backend::TextureRef depthTexture)
 {
 	auto ret = Effekseer::MakeRefPtr<RenderPass>(this);
 

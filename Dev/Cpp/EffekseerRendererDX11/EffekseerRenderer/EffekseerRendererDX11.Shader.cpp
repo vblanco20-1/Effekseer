@@ -10,26 +10,17 @@ Shader::Shader(Effekseer::Backend::GraphicsDeviceRef graphicsDevice,
 	: graphicsDevice_(graphicsDevice)
 	, shader_(shader)
 	, vertexDeclaration_(std::move(vertexDeclaration))
-	, m_constantBufferToVS(nullptr)
-	, m_constantBufferToPS(nullptr)
-	, m_vertexConstantBuffer(nullptr)
-	, m_pixelConstantBuffer(nullptr)
 {
 }
 
 Shader::~Shader()
 {
-	ES_SAFE_RELEASE(m_constantBufferToVS);
-	ES_SAFE_RELEASE(m_constantBufferToPS);
-
-	ES_SAFE_DELETE_ARRAY(m_vertexConstantBuffer);
-	ES_SAFE_DELETE_ARRAY(m_pixelConstantBuffer);
 }
 
-Shader* Shader::Create(Effekseer::Backend::GraphicsDeviceRef graphicsDevice,
-					   Effekseer::Backend::ShaderRef shader,
-					   Effekseer::Backend::VertexLayoutRef layout,
-					   const char* name)
+std::unique_ptr<Shader> Shader::Create(Effekseer::Backend::GraphicsDeviceRef graphicsDevice,
+									   Effekseer::Backend::ShaderRef shader,
+									   Effekseer::Backend::VertexLayoutRef layout,
+									   const char* name)
 {
 	auto shaderdx11 = shader.DownCast<Backend::Shader>();
 	auto gd = graphicsDevice.DownCast<Backend::GraphicsDevice>();
@@ -41,13 +32,12 @@ Shader* Shader::Create(Effekseer::Backend::GraphicsDeviceRef graphicsDevice,
 		return nullptr;
 	}
 
-	return new Shader(graphicsDevice, shaderdx11, std::move(inputLayout));
+	return std::unique_ptr<Shader>(new Shader(graphicsDevice, std::move(shaderdx11), std::move(inputLayout)));
 }
 
 void Shader::SetVertexConstantBufferSize(int32_t size)
 {
-	ES_SAFE_DELETE_ARRAY(m_vertexConstantBuffer);
-	m_vertexConstantBuffer = new uint8_t[size];
+	m_vertexConstantBuffer.reset(new uint8_t[size]);
 
 	D3D11_BUFFER_DESC hBufferDesc;
 	hBufferDesc.ByteWidth = size;
@@ -58,15 +48,16 @@ void Shader::SetVertexConstantBufferSize(int32_t size)
 	hBufferDesc.StructureByteStride = sizeof(float);
 
 	auto gd = graphicsDevice_.DownCast<Backend::GraphicsDevice>();
-	gd->GetDevice()->CreateBuffer(&hBufferDesc, nullptr, &m_constantBufferToVS);
+	ID3D11Buffer* buffer = nullptr;
+	gd->GetDevice()->CreateBuffer(&hBufferDesc, nullptr, &buffer);
+	m_constantBufferToVS.reset(buffer);
 
 	vertexConstantBufferSize_ = size;
 }
 
 void Shader::SetPixelConstantBufferSize(int32_t size)
 {
-	ES_SAFE_DELETE_ARRAY(m_pixelConstantBuffer);
-	m_pixelConstantBuffer = new uint8_t[size];
+	m_pixelConstantBuffer.reset(new uint8_t[size]);
 
 	D3D11_BUFFER_DESC hBufferDesc;
 	hBufferDesc.ByteWidth = size;
@@ -77,7 +68,9 @@ void Shader::SetPixelConstantBufferSize(int32_t size)
 	hBufferDesc.StructureByteStride = sizeof(float);
 
 	auto gd = graphicsDevice_.DownCast<Backend::GraphicsDevice>();
-	gd->GetDevice()->CreateBuffer(&hBufferDesc, nullptr, &m_constantBufferToPS);
+	ID3D11Buffer* buffer = nullptr;
+	gd->GetDevice()->CreateBuffer(&hBufferDesc, nullptr, &buffer);
+	m_constantBufferToPS.reset(buffer);
 
 	pixelConstantBufferSize_ = size;
 }
@@ -88,14 +81,16 @@ void Shader::SetConstantBuffer()
 
 	if (m_vertexConstantBuffer != nullptr)
 	{
-		gd->GetContext()->UpdateSubresource(m_constantBufferToVS, 0, nullptr, m_vertexConstantBuffer, 0, 0);
-		gd->GetContext()->VSSetConstantBuffers(0, 1, &m_constantBufferToVS);
+		gd->GetContext()->UpdateSubresource(m_constantBufferToVS.get(), 0, nullptr, m_vertexConstantBuffer.get(), 0, 0);
+		ID3D11Buffer* buffers[] = {m_constantBufferToVS.get()};
+		gd->GetContext()->VSSetConstantBuffers(0, 1, buffers);
 	}
 
 	if (m_pixelConstantBuffer != nullptr)
 	{
-		gd->GetContext()->UpdateSubresource(m_constantBufferToPS, 0, nullptr, m_pixelConstantBuffer, 0, 0);
-		gd->GetContext()->PSSetConstantBuffers(1, 1, &m_constantBufferToPS);
+		gd->GetContext()->UpdateSubresource(m_constantBufferToPS.get(), 0, nullptr, m_pixelConstantBuffer.get(), 0, 0);
+		ID3D11Buffer* buffers[] = {m_constantBufferToPS.get()};
+		gd->GetContext()->PSSetConstantBuffers(1, 1, buffers);
 	}
 }
 

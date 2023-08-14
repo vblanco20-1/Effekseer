@@ -1,4 +1,3 @@
-
 #ifndef __EFFEKSEERRENDERER_LLGI_GRAPHICS_DEVICE_H__
 #define __EFFEKSEERRENDERER_LLGI_GRAPHICS_DEVICE_H__
 
@@ -6,6 +5,7 @@
 #include <LLGI.Buffer.h>
 #include <LLGI.CommandList.h>
 #include <LLGI.Graphics.h>
+#include <LLGI.PipelineState.h>
 #include <assert.h>
 #include <set>
 
@@ -130,6 +130,10 @@ public:
 
 	bool Init(const Effekseer::Backend::TextureParameter& param, const Effekseer::CustomVector<uint8_t>& initialData);
 
+	bool Init(const Effekseer::Backend::RenderTextureParameter& param);
+
+	bool Init(const Effekseer::Backend::DepthTextureParameter& param);
+
 	bool Init(uint64_t id, std::function<void()> onDisposed);
 
 	bool Init(LLGI::Texture* texture);
@@ -170,6 +174,40 @@ public:
 	}
 };
 
+class RenderPass
+	: public DeviceObject,
+	  public Effekseer::Backend::RenderPass
+{
+private:
+	GraphicsDevice* graphicsDevice_ = nullptr;
+	LLGI::unique_ref<LLGI::RenderPass> renderPass_;
+	Effekseer::FixedSizeVector<Effekseer::Backend::TextureRef, Effekseer::Backend::RenderTargetMax> textures_;
+	Effekseer::Backend::TextureRef depthTexture_;
+
+public:
+	RenderPass(GraphicsDevice* graphicsDevice);
+	~RenderPass() override;
+
+	bool Init(LLGI::RenderPass* renderPass);
+
+	bool Init(Effekseer::FixedSizeVector<Effekseer::Backend::TextureRef, Effekseer::Backend::RenderTargetMax> textures, Effekseer::Backend::TextureRef depthTexture);
+
+	LLGI::RenderPass* GetRenderPass() const
+	{
+		return renderPass_.get();
+	}
+
+	Effekseer::FixedSizeVector<Effekseer::Backend::TextureRef, Effekseer::Backend::RenderTargetMax>& GetTextures()
+	{
+		return textures_;
+	}
+
+	Effekseer::Backend::TextureRef& GetDepthTexture()
+	{
+		return depthTexture_;
+	}
+};
+
 class Shader
 	: public DeviceObject,
 	  public Effekseer::Backend::Shader
@@ -178,6 +216,7 @@ private:
 	GraphicsDevice* graphicsDevice_ = nullptr;
 	std::shared_ptr<LLGI::Shader> vertexShader_ = nullptr;
 	std::shared_ptr<LLGI::Shader> pixelShader_ = nullptr;
+	std::shared_ptr<LLGI::Shader> computeShader_ = nullptr;
 
 public:
 	Shader(GraphicsDevice* graphicsDevice);
@@ -194,12 +233,61 @@ public:
 	}
 };
 
+class UniformBuffer
+	: public DeviceObject,
+	  public Effekseer::Backend::UniformBuffer
+{
+	std::shared_ptr<LLGI::Buffer> buffer_;
+	GraphicsDevice* graphicsDevice_ = nullptr;
+	std::function<void()> onDisposed_;
+
+public:
+	UniformBuffer(GraphicsDevice* graphicsDevice);
+	~UniformBuffer() override;
+
+	bool Init(int32_t size, const void* initialData);
+
+	LLGI::Buffer* GetBuffer() const
+	{
+		return buffer_.get();
+	}
+
+	void UpdateData(const void* src, int32_t size, int32_t offset);
+};
+
+class PipelineState
+	: public DeviceObject,
+	  public Effekseer::Backend::PipelineState
+{
+private:
+	GraphicsDevice* graphicsDevice_ = nullptr;
+	std::shared_ptr<LLGI::PipelineState> pip_;
+	Effekseer::Backend::PipelineStateParameter param_;
+
+public:
+	PipelineState(GraphicsDevice* graphicsDevice);
+	~PipelineState() override;
+
+	bool Init(const Effekseer::Backend::PipelineStateParameter& param);
+
+	LLGI::PipelineState* GetPipelineState() const
+	{
+		return pip_.get();
+	}
+
+	const Effekseer::Backend::PipelineStateParameter& GetParam() const
+	{
+		return param_;
+	}
+};
+
 class GraphicsDevice
 	: public Effekseer::Backend::GraphicsDevice
 {
 private:
 	std::set<DeviceObject*> objects_;
-	LLGI::Graphics* graphics_;
+	LLGI::Graphics* graphics_ = nullptr;
+	LLGI::CommandList* commandList_ = nullptr;
 
 public:
 	GraphicsDevice(LLGI::Graphics* graphics);
@@ -226,10 +314,42 @@ public:
 
 	Effekseer::Backend::TextureRef CreateTexture(LLGI::Texture* texture);
 
+	Effekseer::Backend::TextureRef CreateRenderTexture(const Effekseer::Backend::RenderTextureParameter& param) override;
+
+	Effekseer::Backend::TextureRef CreateDepthTexture(const Effekseer::Backend::DepthTextureParameter& param) override;
+
 	Effekseer::Backend::VertexLayoutRef CreateVertexLayout(const Effekseer::Backend::VertexLayoutElement* elements, int32_t elementCount) override;
 
 	Effekseer::Backend::ShaderRef CreateShaderFromBinary(const void* vsData, int32_t vsDataSize, const void* psData, int32_t psDataSize) override;
+
+	Effekseer::Backend::ShaderRef CreateShaderFromBinary(const std::vector<uint8_t>& vs, const std::vector<uint8_t>& ps) override
+	{
+		return Effekseer::Backend::GraphicsDevice::CreateShaderFromBinary(vs, ps);
+	}
+
+	Effekseer::Backend::UniformBufferRef CreateUniformBuffer(int32_t size, const void* initialData) override;
+
+	Effekseer::Backend::PipelineStateRef CreatePipelineState(const Effekseer::Backend::PipelineStateParameter& param) override;
+
+	Effekseer::Backend::RenderPassRef CreateRenderPass(Effekseer::FixedSizeVector<Effekseer::Backend::TextureRef, Effekseer::Backend::RenderTargetMax> textures, Effekseer::Backend::TextureRef depthTexture) override;
+
+	void SetCommandList(LLGI::CommandList* commandList);
+
+	void Draw(const Effekseer::Backend::DrawParameter& drawParam) override;
+
+	void BeginRenderPass(Effekseer::Backend::RenderPassRef& renderPass, bool isColorCleared, bool isDepthCleared, Effekseer::Color clearColor) override;
+
+	void EndRenderPass() override;
+
+	bool UpdateUniformBuffer(Effekseer::Backend::UniformBufferRef& buffer, int32_t size, int32_t offset, const void* data) override;
+
+	std::string GetDeviceName() const override
+	{
+		return "DirectX12";
+	}
 };
+
+#define LLGI_SHADER(bytes) EffekseerRendererLLGI::Backend::Serialize({LLGI::DataStructure{bytes, sizeof(bytes)}})
 
 } // namespace Backend
 

@@ -4,7 +4,8 @@
 //
 //
 //   fxc /Zpc /Tps_4_0 /Emain /D __INST__=40 /Fh
-//    ShaderHeader/ad_model_distortion_ps.h Shader/ad_model_distortion_ps.fx
+//    EffekseerRenderer\ShaderHeader\ad_model_distortion_ps.h
+//    EffekseerRenderer\Shader\ad_model_distortion_ps.fx
 //
 //
 // Buffer Definitions: 
@@ -183,7 +184,7 @@ ret
 // Approximately 83 instruction slots used
 #endif
 
-const BYTE g_main[] =
+const uint8_t dx11_ad_model_distortion_ps[] =
 {
      68,  88,  66,  67, 117,  83, 
      66, 187, 246, 115, 217,  28, 

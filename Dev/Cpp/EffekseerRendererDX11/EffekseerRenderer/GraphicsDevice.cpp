@@ -905,7 +905,20 @@ RenderPass::~RenderPass()
 	ES_SAFE_RELEASE(graphicsDevice_);
 }
 
-bool RenderPass::Init(Effekseer::FixedSizeVector<Effekseer::Backend::TextureRef, Effekseer::Backend::RenderTargetMax>& textures, Effekseer::Backend::TextureRef depthTexture)
+bool RenderPass::Init(ID3D11RenderTargetView* renderTargetView, ID3D11DepthStencilView* depthStencilView)
+{
+	auto renderTargetTexture = Effekseer::MakeRefPtr<Backend::Texture>(graphicsDevice_);
+	renderTargetTexture->Init(nullptr, renderTargetView, nullptr);
+	textures_ = {renderTargetTexture};
+
+	auto depthStencilTexture = Effekseer::MakeRefPtr<Backend::Texture>(graphicsDevice_);
+	depthStencilTexture->Init(nullptr, nullptr, depthStencilView);
+	depthTexture_ = depthStencilTexture;
+
+	return true;
+}
+
+bool RenderPass::Init(Effekseer::FixedSizeVector<Effekseer::Backend::TextureRef, Effekseer::Backend::RenderTargetMax> textures, Effekseer::Backend::TextureRef depthTexture)
 {
 	textures_ = textures;
 	depthTexture_ = depthTexture;
@@ -1291,7 +1304,7 @@ Effekseer::Backend::VertexLayoutRef GraphicsDevice::CreateVertexLayout(const Eff
 	return ret;
 }
 
-Effekseer::Backend::RenderPassRef GraphicsDevice::CreateRenderPass(Effekseer::FixedSizeVector<Effekseer::Backend::TextureRef, Effekseer::Backend::RenderTargetMax>& textures, Effekseer::Backend::TextureRef& depthTexture)
+Effekseer::Backend::RenderPassRef GraphicsDevice::CreateRenderPass(Effekseer::FixedSizeVector<Effekseer::Backend::TextureRef, Effekseer::Backend::RenderTargetMax> textures, Effekseer::Backend::TextureRef depthTexture)
 {
 	auto ret = Effekseer::MakeRefPtr<RenderPass>(this);
 
@@ -1558,6 +1571,8 @@ void GraphicsDevice::BeginRenderPass(Effekseer::Backend::RenderPassRef& renderPa
 
 void GraphicsDevice::EndRenderPass()
 {
+	std::array<ID3D11RenderTargetView*, 1> rtvs = {};
+	context_->OMSetRenderTargets(1, rtvs.data(), nullptr);
 }
 
 bool GraphicsDevice::UpdateUniformBuffer(Effekseer::Backend::UniformBufferRef& buffer, int32_t size, int32_t offset, const void* data)

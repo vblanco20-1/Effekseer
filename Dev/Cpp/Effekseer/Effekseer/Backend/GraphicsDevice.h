@@ -544,7 +544,7 @@ public:
 		return FrameBufferRef{};
 	}
 
-	virtual RenderPassRef CreateRenderPass(FixedSizeVector<TextureRef, RenderTargetMax>& textures, TextureRef& depthTexture)
+	virtual RenderPassRef CreateRenderPass(FixedSizeVector<TextureRef, RenderTargetMax> textures, TextureRef depthTexture)
 	{
 		return RenderPassRef{};
 	}
@@ -587,6 +587,11 @@ public:
 	virtual ShaderRef CreateShaderFromBinary(const void* vsData, int32_t vsDataSize, const void* psData, int32_t psDataSize)
 	{
 		return ShaderRef{};
+	}
+
+	virtual ShaderRef CreateShaderFromBinary(const std::vector<uint8_t>& vs, const std::vector<uint8_t>& ps)
+	{
+		return CreateShaderFromBinary(vs.data(), static_cast<int32_t>(vs.size()), ps.data(), static_cast<int32_t>(ps.size()));
 	}
 
 	/**

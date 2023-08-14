@@ -4,7 +4,8 @@
 //
 //
 //   fxc /Zpc /Tps_4_0 /Emain /D __INST__=40 /Fh
-//    ShaderHeader/ad_model_unlit_ps.h Shader/ad_model_unlit_ps.fx
+//    EffekseerRenderer\ShaderHeader\ad_model_unlit_ps.h
+//    EffekseerRenderer\Shader\ad_model_unlit_ps.fx
 //
 //
 // Buffer Definitions: 
@@ -253,7 +254,7 @@ ret
 // Approximately 149 instruction slots used
 #endif
 
-const BYTE g_main[] =
+const uint8_t dx11_ad_model_unlit_ps[] =
 {
      68,  88,  66,  67,  22, 212, 
      54,  51, 183,  61,   4, 133, 

@@ -27,21 +27,21 @@ class ModelRenderer : public ::EffekseerRenderer::ModelRendererBase
 {
 private:
 	RendererImplementedRef m_renderer;
-	Shader* shader_advanced_lit_;
-	Shader* shader_advanced_unlit_;
-	Shader* shader_advanced_distortion_;
-	Shader* shader_lit_;
-	Shader* shader_unlit_;
-	Shader* shader_distortion_;
+	std::unique_ptr<Shader> shader_advanced_lit_;
+	std::unique_ptr<Shader> shader_advanced_unlit_;
+	std::unique_ptr<Shader> shader_advanced_distortion_;
+	std::unique_ptr<Shader> shader_lit_;
+	std::unique_ptr<Shader> shader_unlit_;
+	std::unique_ptr<Shader> shader_distortion_;
 	Backend::GraphicsDeviceRef graphicsDevice_ = nullptr;
 
 	ModelRenderer(const RendererImplementedRef& renderer,
-				  Shader* shader_advanced_lit,
-				  Shader* shader_advanced_unlit,
-				  Shader* shader_advanced_distortion,
-				  Shader* shader_lit,
-				  Shader* shader_unlit,
-				  Shader* shader_distortion);
+				  std::unique_ptr<Shader> shader_advanced_lit,
+				  std::unique_ptr<Shader> shader_advanced_unlit,
+				  std::unique_ptr<Shader> shader_advanced_distortion,
+				  std::unique_ptr<Shader> shader_lit,
+				  std::unique_ptr<Shader> shader_unlit,
+				  std::unique_ptr<Shader> shader_distortion);
 
 public:
 	virtual ~ModelRenderer();

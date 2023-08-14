@@ -17,11 +17,11 @@ private:
 	Backend::ShaderRef shaderOverride_;
 
 	Backend::D3D11InputLayoutPtr vertexDeclaration_;
-	ID3D11Buffer* m_constantBufferToVS;
-	ID3D11Buffer* m_constantBufferToPS;
+	Backend::D3D11BufferPtr m_constantBufferToVS;
+	Backend::D3D11BufferPtr m_constantBufferToPS;
 
-	void* m_vertexConstantBuffer = nullptr;
-	void* m_pixelConstantBuffer = nullptr;
+	std::unique_ptr<uint8_t[]> m_vertexConstantBuffer;
+	std::unique_ptr<uint8_t[]> m_pixelConstantBuffer;
 	int32_t vertexConstantBufferSize_ = 0;
 	int32_t pixelConstantBufferSize_ = 0;
 
@@ -32,7 +32,7 @@ private:
 public:
 	virtual ~Shader();
 
-	static Shader* Create(Effekseer::Backend::GraphicsDeviceRef graphicsDevice,
+	static std::unique_ptr<Shader> Create(Effekseer::Backend::GraphicsDeviceRef graphicsDevice,
 						  Effekseer::Backend::ShaderRef shader,
 						  Effekseer::Backend::VertexLayoutRef layout,
 						  const char* name);
@@ -68,6 +68,7 @@ public:
 	}
 
 	void SetVertexConstantBufferSize(int32_t size);
+
 	void SetPixelConstantBufferSize(int32_t size);
 
 	int32_t GetVertexConstantBufferSize() const
@@ -81,11 +82,11 @@ public:
 
 	void* GetVertexConstantBuffer()
 	{
-		return m_vertexConstantBuffer;
+		return m_vertexConstantBuffer.get();
 	}
 	void* GetPixelConstantBuffer()
 	{
-		return m_pixelConstantBuffer;
+		return m_pixelConstantBuffer.get();
 	}
 
 	void SetConstantBuffer();

@@ -89,34 +89,36 @@ MaterialLoader ::~MaterialLoader()
 
 	for (int32_t st = 0; st < shaderTypeCount; st++)
 	{
-		Shader* shader = nullptr;
+		std::unique_ptr<Shader> shader;
 		auto parameterGenerator = EffekseerRenderer::MaterialShaderParameterGenerator(materialFile, false, st, 40);
 
 		if (material->IsSimpleVertex)
 		{
 			auto vl = EffekseerRenderer::GetMaterialSimpleVertexLayout(graphicsDevice_).DownCast<Backend::VertexLayout>();
 
-			shader = Shader::Create(graphicsDevice_,
-									graphicsDevice_->CreateShaderFromBinary(
-										(uint8_t*)binary->GetVertexShaderData(shaderTypes[st]),
-										binary->GetVertexShaderSize(shaderTypes[st]),
-										(uint8_t*)binary->GetPixelShaderData(shaderTypes[st]),
-										binary->GetPixelShaderSize(shaderTypes[st])),
-									vl,
-									"MaterialStandardRenderer");
+			shader = Shader::Create(
+				graphicsDevice_,
+				graphicsDevice_->CreateShaderFromBinary(
+					(uint8_t*)binary->GetVertexShaderData(shaderTypes[st]),
+					binary->GetVertexShaderSize(shaderTypes[st]),
+					(uint8_t*)binary->GetPixelShaderData(shaderTypes[st]),
+					binary->GetPixelShaderSize(shaderTypes[st])),
+				vl,
+				"MaterialStandardRenderer");
 		}
 		else
 		{
 			auto vl = EffekseerRenderer::GetMaterialSpriteVertexLayout(graphicsDevice_, static_cast<int32_t>(materialFile.GetCustomData1Count()), static_cast<int32_t>(materialFile.GetCustomData2Count())).DownCast<Backend::VertexLayout>();
 
-			shader = Shader::Create(graphicsDevice_,
-									graphicsDevice_->CreateShaderFromBinary(
-										(uint8_t*)binary->GetVertexShaderData(shaderTypes[st]),
-										binary->GetVertexShaderSize(shaderTypes[st]),
-										(uint8_t*)binary->GetPixelShaderData(shaderTypes[st]),
-										binary->GetPixelShaderSize(shaderTypes[st])),
-									vl,
-									"MaterialStandardRenderer");
+			shader = Shader::Create(
+				graphicsDevice_,
+				graphicsDevice_->CreateShaderFromBinary(
+					(uint8_t*)binary->GetVertexShaderData(shaderTypes[st]),
+					binary->GetVertexShaderSize(shaderTypes[st]),
+					(uint8_t*)binary->GetPixelShaderData(shaderTypes[st]),
+					binary->GetPixelShaderSize(shaderTypes[st])),
+				vl,
+				"MaterialStandardRenderer");
 
 			if (shader == nullptr)
 				return false;
@@ -133,11 +135,11 @@ MaterialLoader ::~MaterialLoader()
 
 		if (st == 0)
 		{
-			material->UserPtr = shader;
+			material->UserPtr = shader.get();
 		}
 		else
 		{
-			material->RefractionUserPtr = shader;
+			material->RefractionUserPtr = shader.get();
 		}
 	}
 
@@ -150,14 +152,15 @@ MaterialLoader ::~MaterialLoader()
 		// compile
 		std::string log;
 
-		auto shader = Shader::Create(graphicsDevice_,
-									 graphicsDevice_->CreateShaderFromBinary(
-										 (uint8_t*)binary->GetVertexShaderData(shaderTypesModel[st]),
-										 binary->GetVertexShaderSize(shaderTypesModel[st]),
-										 (uint8_t*)binary->GetPixelShaderData(shaderTypesModel[st]),
-										 binary->GetPixelShaderSize(shaderTypesModel[st])),
-									 vl,
-									 "MaterialStandardModelRenderer");
+		auto shader = Shader::Create(
+			graphicsDevice_,
+			graphicsDevice_->CreateShaderFromBinary(
+				(uint8_t*)binary->GetVertexShaderData(shaderTypesModel[st]),
+				binary->GetVertexShaderSize(shaderTypesModel[st]),
+				(uint8_t*)binary->GetPixelShaderData(shaderTypesModel[st]),
+				binary->GetPixelShaderSize(shaderTypesModel[st])),
+			vl,
+			"MaterialStandardModelRenderer");
 
 		if (shader == nullptr)
 			return false;
@@ -170,11 +173,11 @@ MaterialLoader ::~MaterialLoader()
 
 		if (st == 0)
 		{
-			material->ModelUserPtr = shader;
+			material->ModelUserPtr = shader.get();
 		}
 		else
 		{
-			material->RefractionModelUserPtr = shader;
+			material->RefractionModelUserPtr = shader.get();
 		}
 	}
 
