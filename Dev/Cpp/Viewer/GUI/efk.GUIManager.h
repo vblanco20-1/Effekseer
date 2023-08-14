@@ -11,6 +11,7 @@
 
 #ifdef _WIN32
 #include "../3rdParty/imgui_platform/imgui_impl_dx11.h"
+#include "../3rdParty/imgui_platform/imgui_impl_dx12.h"
 #endif
 
 //#include "../3rdParty/imgui_glfw_gl3/imgui_impl_glfw_gl3.h"
@@ -569,7 +570,11 @@ private:
 
 	Effekseer::FramerateController framerateController_;
 
+	std::shared_ptr<Effekseer::Tool::GraphicsDevice> graphicsDevice_;
+
 	static void MarkdownLinkCallback(ImGui::MarkdownLinkCallbackData data);
+
+	ImTextureID ToImTextureID(std::shared_ptr<Effekseer::Tool::Image> image);
 
 public:
 	GUIManager();

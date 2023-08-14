@@ -104,22 +104,59 @@ if (WIN32)
 FILE(GLOB hs_g
 	Graphics/Platform/DX11/*.h
 	Graphics/Platform/GL/*.h
+	Graphics/Platform/LLGI/*.h
 )
 
 FILE(GLOB cpps_g
 	Graphics/Platform/DX11/*.cpp
 	Graphics/Platform/GL/*.cpp
+	Graphics/Platform/LLGI/*.cpp
 )
 else()
 FILE(GLOB hs_g
 	Graphics/Platform/GL/*.h
+	Graphics/Platform/LLGI/*.h
 )
 
 FILE(GLOB cpps_g
 	Graphics/Platform/GL/*.cpp
+	Graphics/Platform/LLGI/*.cpp
 )
 
 endif()
+
+
+list(APPEND hs
+  Graphics/Platform/LLGI/ImGuiPlatform/ImGuiPlatform.h
+)
+
+if(BUILD_DX12)
+  list(APPEND hs
+    Graphics/Platform/LLGI/ImGuiPlatform/ImGuiPlatformDX12.h
+  )
+  list(APPEND cpps
+    Graphics/Platform/LLGI/ImGuiPlatform/ImGuiPlatformDX12.cpp
+  )
+endif()
+
+if(BUILD_METAL)
+  list(APPEND hs
+    Graphics/Platform/LLGI/ImGuiPlatform/ImGuiPlatformMetal.h
+  )
+  list(APPEND cpps
+    Graphics/Platform/LLGI/ImGuiPlatform/ImGuiPlatformMetal.mm
+  )
+endif()
+
+if(BUILD_VULKAN)
+  list(APPEND hs
+    Graphics/Platform/LLGI/ImGuiPlatform/ImGuiPlatformVulkan.h
+  )
+  list(APPEND cpps
+    Graphics/Platform/LLGI/ImGuiPlatform/ImGuiPlatformVulkan.cpp
+  )
+endif()
+
 
 list(APPEND hs ${hs_g})
 list(APPEND cpps ${cpps_g})
@@ -130,10 +167,12 @@ FilterFolder("${cpps}")
 
 include_directories(
 	${EFK_THIRDPARTY_INCLUDES}
+	../
 	../include/
 	../EffekseerRendererGL/
+	../EffekseerRendererLLGI/
 	../EffekseerSoundOSMixer/
-	../
+    ../3rdParty/LLGI/src
 )
 
 add_library(Viewer SHARED ${cpps} ${hs})
@@ -150,6 +189,7 @@ target_link_libraries(
     imgui
     imgui_platform
     ImGradientHDR
+    LLGI
     debug "${GD_LIB_DEBUG}"
     optimized "${GD_LIB_RELEASE}"
     debug "${LIBPNG_LIB_DEBUG}"
@@ -185,6 +225,7 @@ target_link_libraries(
     Viewer
     PRIVATE
     Effekseer
+    EffekseerRendererLLGI
     EffekseerSoundOSMixer
     IPC
     nfd)
@@ -195,6 +236,7 @@ if (WIN32)
         Viewer
         PRIVATE
         EffekseerRendererDX11
+        EffekseerRendererDX12
         EffekseerRendererGL
         EffekseerSoundOSMixer
         debug libglew32d
@@ -217,6 +259,7 @@ elseif(APPLE)
         Viewer
         PRIVATE
         EffekseerRendererGL
+        EffekseerRendererMetal
         ${OpenAL_LIBRARY}
         "-framework OpenAL"
         ${CMAKE_THREAD_LIBS_INIT}

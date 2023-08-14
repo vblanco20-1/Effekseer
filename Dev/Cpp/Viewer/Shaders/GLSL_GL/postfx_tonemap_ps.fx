@@ -9,12 +9,12 @@ struct PS_Input
     vec2 UV;
 };
 
-struct _Global
+struct PS_ConstantBuffer
 {
     vec4 g_toneparams;
 };
 
-uniform _Global CBPS0;
+uniform PS_ConstantBuffer CBPS0;
 
 layout(binding = 0) uniform sampler2D Sampler_g_sampler;
 

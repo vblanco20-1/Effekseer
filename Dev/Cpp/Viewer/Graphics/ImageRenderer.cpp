@@ -1,20 +1,15 @@
 #include "ImageRenderer.h"
 
+#include <EffekseerRendererLLGI/GraphicsDevice.h>
+
 namespace
 {
+
 #ifdef _WIN32
-
-using BYTE = uint8_t;
-
-namespace VS
-{
 #include "../Shaders/HLSL_DX11_Header/image_vs.h"
-}
-
-namespace PS
-{
 #include "../Shaders/HLSL_DX11_Header/image_ps.h"
-}
+#include "../Shaders/HLSL_DX12_Header/image_vs.h"
+#include "../Shaders/HLSL_DX12_Header/image_ps.h"
 #endif
 
 #include "../Shaders/GLSL_GL_Header/image_ps.h"
@@ -54,16 +49,20 @@ std::shared_ptr<ImageRenderer> ImageRenderer::Create(RefPtr<Backend::GraphicsDev
 
 	Effekseer::Backend::ShaderRef shader;
 
-	if (graphicsDevice->GetDeviceName() == "DirectX11")
-	{
-#ifdef _WIN32
-		shader = graphicsDevice->CreateShaderFromBinary(VS::g_main, sizeof(VS::g_main), PS::g_main, sizeof(PS::g_main));
-#endif
-	}
-	else
+	if (graphicsDevice->GetDeviceName() == "OpenGL")
 	{
 		shader = graphicsDevice->CreateShaderFromCodes({{gl_image_vs}}, {{gl_image_ps}}, uniformLayout);
 	}
+#ifdef _WIN32
+	else if (graphicsDevice->GetDeviceName() == "DirectX11")
+	{
+		shader = graphicsDevice->CreateShaderFromBinary(dx11_image_vs, sizeof(dx11_image_vs), dx11_image_ps, sizeof(dx11_image_ps));
+	}
+	else if (graphicsDevice->GetDeviceName() == "DirectX12")
+	{
+		shader = graphicsDevice->CreateShaderFromBinary(LLGI_SHADER(dx12_image_vs), LLGI_SHADER(dx12_image_ps));
+	}
+#endif
 
 	std::vector<Effekseer::Backend::VertexLayoutElement> vertexLayoutElements;
 	vertexLayoutElements.resize(3);

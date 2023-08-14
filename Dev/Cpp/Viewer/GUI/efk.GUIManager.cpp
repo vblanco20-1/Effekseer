@@ -3,9 +3,13 @@
 #include <GL/glew.h>
 #endif
 
+#include "../Graphics/Platform/LLGI/efk.GraphicsLLGI.h"
+#include <EffekseerRendererLLGI/GraphicsDevice.h>
+
 #ifdef _WIN32
 #include "../Graphics/Platform/DX11/efk.GraphicsDX11.h"
 #include <EffekseerRendererDX11/EffekseerRenderer/GraphicsDevice.h>
+#include <DX12/LLGI.PlatformDX12.h>
 #endif
 
 #include <EffekseerRendererGL/EffekseerRenderer/GraphicsDevice.h>
@@ -168,35 +172,57 @@ struct utf8str
 	}
 };
 
-static ImTextureID ToImTextureID(std::shared_ptr<Effekseer::Tool::Image> image)
+ImTextureID GUIManager::ToImTextureID(std::shared_ptr<Effekseer::Tool::Image> image)
 {
-	if (image != nullptr)
+	if (image == nullptr)
 	{
-		auto texture = image->GetTexture();
-		if (texture != nullptr)
-		{
-#ifdef _WIN32
-			auto t_dx11 = dynamic_cast<EffekseerRendererDX11::Backend::Texture*>(texture.Get());
-			if (t_dx11 != nullptr)
-			{
-				return reinterpret_cast<ImTextureID>(t_dx11->GetSRV());
-			}
-#endif
-			auto t_gl = dynamic_cast<EffekseerRendererGL::Backend::Texture*>(texture.Get());
-			if (t_gl != nullptr)
-			{
-				auto buffer = t_gl->GetBuffer();
-				GLint bound;
-				glGetIntegerv(GL_TEXTURE_BINDING_2D, &bound);
-				glBindTexture(GL_TEXTURE_2D, buffer);
-				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-				glBindTexture(GL_TEXTURE_2D, bound);
+		return nullptr;
+	}
 
-				return reinterpret_cast<ImTextureID>(static_cast<size_t>(buffer));
-			}
+	auto texture = image->GetTexture();
+	if (texture == nullptr)
+	{
+		return nullptr;
+	}
+
+	if (deviceType == Effekseer::Tool::DeviceType::OpenGL3)
+	{
+		auto t_gl = texture.DownCast<EffekseerRendererGL::Backend::Texture>();
+		if (t_gl != nullptr)
+		{
+			auto buffer = t_gl->GetBuffer();
+			GLint bound;
+			glGetIntegerv(GL_TEXTURE_BINDING_2D, &bound);
+			glBindTexture(GL_TEXTURE_2D, buffer);
+			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+			glBindTexture(GL_TEXTURE_2D, bound);
+
+			return reinterpret_cast<ImTextureID>(static_cast<size_t>(buffer));
 		}
 	}
+#ifdef _WIN32
+	else if (deviceType == Effekseer::Tool::DeviceType::DirectX11)
+	{
+		auto t_dx11 = texture.DownCast<EffekseerRendererDX11::Backend::Texture>();
+		if (t_dx11 != nullptr)
+		{
+			return reinterpret_cast<ImTextureID>(t_dx11->GetSRV());
+		}
+	}
+#endif
+	else if (deviceType == Effekseer::Tool::DeviceType::DirectX12 ||
+		deviceType == Effekseer::Tool::DeviceType::Vulkan ||
+		deviceType == Effekseer::Tool::DeviceType::Metal)
+	{
+		auto t_llgi = texture.DownCast<EffekseerRendererLLGI::Backend::Texture>();
+		if (t_llgi != nullptr)
+		{
+			auto g = (efk::GraphicsLLGI*)graphicsDevice_->GetGraphics().get();
+			return g->GetImguiPlatform()->ToTextureID(t_llgi->GetTexture().get());
+		}
+	}
+
 	return nullptr;
 }
 
@@ -366,7 +392,7 @@ bool GUIManager::Initialize(std::shared_ptr<Effekseer::MainWindow> mainWindow, E
 		}
 	};
 
-	if (deviceType == Effekseer::Tool::DeviceType::OpenGL)
+	if (deviceType == Effekseer::Tool::DeviceType::OpenGL3)
 	{
 		window->MakeCurrent();
 
@@ -380,12 +406,14 @@ bool GUIManager::Initialize(std::shared_ptr<Effekseer::MainWindow> mainWindow, E
 
 void GUIManager::InitializeGUI(std::shared_ptr<Effekseer::Tool::GraphicsDevice> graphicsDevice)
 {
+	graphicsDevice_ = graphicsDevice;
+
 	ImGui::CreateContext();
 	ImGui::GetCurrentContext()->PlatformLocaleDecimalPoint = *localeconv()->decimal_point;
 
 	ImGuiIO& io = ImGui::GetIO();
 
-	if (deviceType == Effekseer::Tool::DeviceType::OpenGL)
+	if (deviceType == Effekseer::Tool::DeviceType::OpenGL3)
 	{
 		// It causes bugs on some mac pc
 		// io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
@@ -409,6 +437,15 @@ void GUIManager::InitializeGUI(std::shared_ptr<Effekseer::Tool::GraphicsDevice> 
 
 		auto gd = graphicsDevice->GetGraphics()->GetGraphicsDevice().DownCast<EffekseerRendererDX11::Backend::GraphicsDevice>();
 		ImGui_ImplDX11_Init(gd->GetDevice(), gd->GetContext());
+	}
+	else if (deviceType == Effekseer::Tool::DeviceType::DirectX12)
+	{
+		io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
+
+		ImGui_ImplGlfw_InitForVulkan(window->GetGLFWWindows(), true);
+
+		auto g = (efk::GraphicsLLGI*)graphicsDevice->GetGraphics().get();
+		g->GetImguiPlatform()->Init();
 	}
 	else
 	{
@@ -482,7 +519,7 @@ void GUIManager::Terminate()
 {
 	ImPlot::DestroyContext();
 
-	if (deviceType == Effekseer::Tool::DeviceType::OpenGL)
+	if (deviceType == Effekseer::Tool::DeviceType::OpenGL3)
 	{
 		ImGui_ImplOpenGL3_Shutdown();
 	}
@@ -490,6 +527,11 @@ void GUIManager::Terminate()
 	else if (deviceType == Effekseer::Tool::DeviceType::DirectX11)
 	{
 		ImGui_ImplDX11_Shutdown();
+	}
+	else if (deviceType == Effekseer::Tool::DeviceType::DirectX12)
+	{
+		auto g = (efk::GraphicsLLGI*)graphicsDevice_->GetGraphics().get();
+		g->GetImguiPlatform()->Shutdown();
 	}
 	else
 	{
@@ -573,7 +615,7 @@ void GUIManager::SetCallback(GUIManagerCallback* callback)
 
 void GUIManager::InvalidateFont()
 {
-	if (deviceType == Effekseer::Tool::DeviceType::OpenGL)
+	if (deviceType == Effekseer::Tool::DeviceType::OpenGL3)
 	{
 		ImGui_ImplOpenGL3_DestroyFontsTexture();
 	}
@@ -581,6 +623,11 @@ void GUIManager::InvalidateFont()
 	else if (deviceType == Effekseer::Tool::DeviceType::DirectX11)
 	{
 		ImGui_ImplDX11_InvalidateDeviceObjects();
+	}
+	else if (deviceType == Effekseer::Tool::DeviceType::DirectX12)
+	{
+		auto g = (efk::GraphicsLLGI*)graphicsDevice_->GetGraphics().get();
+		g->GetImguiPlatform()->DisposeFont();
 	}
 	else
 	{
@@ -591,7 +638,7 @@ void GUIManager::InvalidateFont()
 
 void GUIManager::ResetGUI()
 {
-	if (deviceType == Effekseer::Tool::DeviceType::OpenGL)
+	if (deviceType == Effekseer::Tool::DeviceType::OpenGL3)
 	{
 		ImGui_ImplOpenGL3_NewFrame();
 	}
@@ -600,11 +647,18 @@ void GUIManager::ResetGUI()
 	{
 		ImGui_ImplDX11_NewFrame();
 	}
+#endif
+	else if (deviceType == Effekseer::Tool::DeviceType::DirectX12 ||
+		deviceType == Effekseer::Tool::DeviceType::Vulkan ||
+		deviceType == Effekseer::Tool::DeviceType::Metal)
+	{
+		auto g = (efk::GraphicsLLGI*)graphicsDevice_->GetGraphics().get();
+		g->GetImguiPlatform()->NewFrame(g->GetPlatform()->GetCurrentScreen());
+	}
 	else
 	{
 		assert(0);
 	}
-#endif
 
 	ImGui_ImplGlfw_NewFrame();
 	ImGui::NewFrame();
@@ -616,22 +670,31 @@ void GUIManager::RenderGUI(bool isValid)
 
 	if (isValid)
 	{
-		if (deviceType == Effekseer::Tool::DeviceType::OpenGL)
+		auto graphics = graphicsDevice_->GetGraphics();
+		auto device = graphics->GetGraphicsDevice();
+		device->BeginRenderPass(graphics->GetScreenRenderPass(), true, true, {});
+
+		ImGui::Render();
+
+		if (deviceType == Effekseer::Tool::DeviceType::OpenGL3)
 		{
-			ImGui::Render();
 			ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 		}
 #if _WIN32
 		else if (deviceType == Effekseer::Tool::DeviceType::DirectX11)
 		{
-			ImGui::Render();
 			ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
 		}
-		else
-		{
-			assert(0);
-		}
 #endif
+		else if (deviceType == Effekseer::Tool::DeviceType::DirectX12 ||
+			deviceType == Effekseer::Tool::DeviceType::Vulkan ||
+			deviceType == Effekseer::Tool::DeviceType::Metal)
+		{
+			auto g = (efk::GraphicsLLGI*)graphics.get();
+			g->GetImguiPlatform()->RenderDrawData(ImGui::GetDrawData(), g->GetCommandList());
+		}
+
+		device->EndRenderPass();
 	}
 	else
 	{
@@ -653,7 +716,7 @@ void GUIManager::RenderGUI(bool isValid)
 			}
 		}
 
-		if (deviceType == Effekseer::Tool::DeviceType::OpenGL)
+		if (deviceType == Effekseer::Tool::DeviceType::OpenGL3)
 		{
 			glfwMakeContextCurrent(window->GetGLFWWindows());
 		}
@@ -662,7 +725,16 @@ void GUIManager::RenderGUI(bool isValid)
 
 void* GUIManager::GetNativeHandle()
 {
-	return window->GetNativeHandle();
+	if (deviceType == Effekseer::Tool::DeviceType::DirectX12 ||
+		deviceType == Effekseer::Tool::DeviceType::Metal ||
+		deviceType == Effekseer::Tool::DeviceType::Vulkan)
+	{
+		return window->GetGLFWWindows();
+	}
+	else
+	{
+		return window->GetNativeHandle();
+	}
 }
 
 const char16_t* GUIManager::GetClipboardText()

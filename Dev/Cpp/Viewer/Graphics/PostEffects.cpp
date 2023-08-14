@@ -1,66 +1,32 @@
 #include "PostEffects.h"
 #include "../Math/Vector2I.h"
 
+#include <EffekseerRendererLLGI/GraphicsDevice.h>
+
 namespace
 {
 
 #ifdef _WIN32
 
-using BYTE = uint8_t;
-
-namespace PostFX_Basic_VS
-{
-static
 #include "../Shaders/HLSL_DX11_Header/postfx_basic_vs.h"
-} // namespace PostFX_Basic_VS
-
-namespace PostFX_LinearToSRGB_PS
-{
-static
 #include "../Shaders/HLSL_DX11_Header/postfx_linear_to_srgb_ps.h"
-} // namespace PostFX_LinearToSRGB_PS
-
-namespace PostFX_Copy_PS
-{
-static
 #include "../Shaders/HLSL_DX11_Header/postfx_copy_ps.h"
-} // namespace PostFX_Copy_PS
-
-namespace PostFX_Tonemap_PS
-{
-static
 #include "../Shaders/HLSL_DX11_Header/postfx_tonemap_ps.h"
-} // namespace PostFX_Tonemap_PS
-
-namespace PostFX_Extract_PS
-{
-static
 #include "../Shaders/HLSL_DX11_Header/postfx_extract_ps.h"
-} // namespace PostFX_Extract_PS
-
-namespace PostFX_Downsample_PS
-{
-static
 #include "../Shaders/HLSL_DX11_Header/postfx_downsample_ps.h"
-} // namespace PostFX_Downsample_PS
-
-namespace PostFX_Blend_PS
-{
-static
 #include "../Shaders/HLSL_DX11_Header/postfx_blend_ps.h"
-} // namespace PostFX_Blend_PS
-
-namespace PostFX_BlurH_PS
-{
-static
 #include "../Shaders/HLSL_DX11_Header/postfx_blur_h_ps.h"
-} // namespace PostFX_BlurH_PS
-
-namespace PostFX_BlurV_PS
-{
-static
 #include "../Shaders/HLSL_DX11_Header/postfx_blur_v_ps.h"
-} // namespace PostFX_BlurV_PS
+
+#include "../Shaders/HLSL_DX12_Header/postfx_basic_vs.h"
+#include "../Shaders/HLSL_DX12_Header/postfx_linear_to_srgb_ps.h"
+#include "../Shaders/HLSL_DX12_Header/postfx_copy_ps.h"
+#include "../Shaders/HLSL_DX12_Header/postfx_tonemap_ps.h"
+#include "../Shaders/HLSL_DX12_Header/postfx_extract_ps.h"
+#include "../Shaders/HLSL_DX12_Header/postfx_downsample_ps.h"
+#include "../Shaders/HLSL_DX12_Header/postfx_blend_ps.h"
+#include "../Shaders/HLSL_DX12_Header/postfx_blur_h_ps.h"
+#include "../Shaders/HLSL_DX12_Header/postfx_blur_v_ps.h"
 
 #endif
 
@@ -105,69 +71,32 @@ BloomPostEffect::BloomPostEffect(Backend::GraphicsDeviceRef graphicsDevice)
 	Effekseer::Backend::ShaderRef shaderBlurH;
 	Effekseer::Backend::ShaderRef shaderBlurV;
 
-	if (graphicsDevice->GetDeviceName() == "DirectX11")
+	if (graphicsDevice->GetDeviceName() == "OpenGL")
 	{
+		shaderExtract = graphicsDevice->CreateShaderFromCodes({gl_postfx_basic_vs}, {gl_postfx_extract_ps}, uniformLayout);
+		shaderDownsample = graphicsDevice->CreateShaderFromCodes({gl_postfx_basic_vs}, {gl_postfx_downsample_ps}, uniformLayoutSingleImage);
+		shaderBlend = graphicsDevice->CreateShaderFromCodes({gl_postfx_basic_vs}, {gl_postfx_blend_ps}, uniformLayoutImages);
+		shaderBlurH = graphicsDevice->CreateShaderFromCodes({gl_postfx_basic_vs}, {gl_postfx_blur_h_ps}, uniformLayoutSingleImage);
+		shaderBlurV = graphicsDevice->CreateShaderFromCodes({gl_postfx_basic_vs}, {gl_postfx_blur_v_ps}, uniformLayoutSingleImage);
+	}
 #ifdef _WIN32
-		shaderExtract = graphicsDevice->CreateShaderFromBinary(
-			PostFX_Basic_VS::g_main,
-			sizeof(PostFX_Basic_VS::g_main),
-			PostFX_Extract_PS::g_main,
-			sizeof(PostFX_Extract_PS::g_main));
-
-		shaderDownsample = graphicsDevice->CreateShaderFromBinary(
-			PostFX_Basic_VS::g_main,
-			sizeof(PostFX_Basic_VS::g_main),
-			PostFX_Downsample_PS::g_main,
-			sizeof(PostFX_Downsample_PS::g_main));
-
-		shaderBlend = graphicsDevice->CreateShaderFromBinary(
-			PostFX_Basic_VS::g_main,
-			sizeof(PostFX_Basic_VS::g_main),
-			PostFX_Blend_PS::g_main,
-			sizeof(PostFX_Blend_PS::g_main));
-
-		// Blur(horizontal) shader
-		shaderBlurH = graphicsDevice->CreateShaderFromBinary(
-			PostFX_Basic_VS::g_main,
-			sizeof(PostFX_Basic_VS::g_main),
-			PostFX_BlurH_PS::g_main,
-			sizeof(PostFX_BlurH_PS::g_main));
-
-		// Blur(vertical) shader
-		shaderBlurV = graphicsDevice->CreateShaderFromBinary(
-			PostFX_Basic_VS::g_main,
-			sizeof(PostFX_Basic_VS::g_main),
-			PostFX_BlurV_PS::g_main,
-			sizeof(PostFX_BlurV_PS::g_main));
-#endif
-	}
-	else
+	else if (graphicsDevice->GetDeviceName() == "DirectX11")
 	{
-		shaderExtract = graphicsDevice->CreateShaderFromCodes(
-			{gl_postfx_basic_vs},
-			{gl_postfx_extract_ps},
-			uniformLayout);
-
-		shaderDownsample = graphicsDevice->CreateShaderFromCodes(
-			{gl_postfx_basic_vs},
-			{gl_postfx_downsample_ps},
-			uniformLayoutSingleImage);
-
-		shaderBlend = graphicsDevice->CreateShaderFromCodes(
-			{gl_postfx_basic_vs},
-			{gl_postfx_blend_ps},
-			uniformLayoutImages);
-
-		shaderBlurH = graphicsDevice->CreateShaderFromCodes(
-			{gl_postfx_basic_vs},
-			{gl_postfx_blur_h_ps},
-			uniformLayoutSingleImage);
-
-		shaderBlurV = graphicsDevice->CreateShaderFromCodes(
-			{gl_postfx_basic_vs},
-			{gl_postfx_blur_v_ps},
-			uniformLayoutSingleImage);
+		shaderExtract = graphicsDevice->CreateShaderFromBinary(dx11_postfx_basic_vs, sizeof(dx11_postfx_basic_vs), dx11_postfx_extract_ps, sizeof(dx11_postfx_extract_ps));
+		shaderDownsample = graphicsDevice->CreateShaderFromBinary(dx11_postfx_basic_vs, sizeof(dx11_postfx_basic_vs), dx11_postfx_downsample_ps, sizeof(dx11_postfx_downsample_ps));
+		shaderBlend = graphicsDevice->CreateShaderFromBinary(dx11_postfx_basic_vs, sizeof(dx11_postfx_basic_vs), dx11_postfx_blend_ps, sizeof(dx11_postfx_blend_ps));
+		shaderBlurH = graphicsDevice->CreateShaderFromBinary(dx11_postfx_basic_vs, sizeof(dx11_postfx_basic_vs), dx11_postfx_blur_h_ps, sizeof(dx11_postfx_blur_h_ps));
+		shaderBlurV = graphicsDevice->CreateShaderFromBinary(dx11_postfx_basic_vs, sizeof(dx11_postfx_basic_vs), dx11_postfx_blur_v_ps, sizeof(dx11_postfx_blur_v_ps));
 	}
+	else if (graphicsDevice->GetDeviceName() == "DirectX12")
+	{
+		shaderExtract = graphicsDevice->CreateShaderFromBinary(LLGI_SHADER(dx12_postfx_basic_vs), LLGI_SHADER(dx12_postfx_extract_ps));
+		shaderDownsample = graphicsDevice->CreateShaderFromBinary(LLGI_SHADER(dx12_postfx_basic_vs), LLGI_SHADER(dx12_postfx_downsample_ps));
+		shaderBlend = graphicsDevice->CreateShaderFromBinary(LLGI_SHADER(dx12_postfx_basic_vs), LLGI_SHADER(dx12_postfx_blend_ps));
+		shaderBlurH = graphicsDevice->CreateShaderFromBinary(LLGI_SHADER(dx12_postfx_basic_vs), LLGI_SHADER(dx12_postfx_blur_h_ps));
+		shaderBlurV = graphicsDevice->CreateShaderFromBinary(LLGI_SHADER(dx12_postfx_basic_vs), LLGI_SHADER(dx12_postfx_blur_v_ps));
+	}
+#endif
 
 	if (shaderExtract != nullptr)
 	{
@@ -392,35 +321,23 @@ TonemapPostEffect::TonemapPostEffect(Backend::GraphicsDeviceRef graphicsDevice)
 	Effekseer::Backend::ShaderRef shader_copy;
 	Effekseer::Backend::ShaderRef shader_tone;
 
-	if (graphicsDevice->GetDeviceName() == "DirectX11")
+	if (graphicsDevice->GetDeviceName() == "OpenGL")
 	{
+		shader_copy = graphicsDevice->CreateShaderFromCodes({gl_postfx_basic_vs}, {gl_postfx_copy_ps}, uniformLayoutCopy);
+		shader_tone = graphicsDevice->CreateShaderFromCodes({gl_postfx_basic_vs}, {gl_postfx_tonemap_ps}, uniformLayoutTone);
+	}
 #ifdef _WIN32
-		shader_copy = graphicsDevice->CreateShaderFromBinary(
-			PostFX_Basic_VS::g_main,
-			sizeof(PostFX_Basic_VS::g_main),
-			PostFX_Copy_PS::g_main,
-			sizeof(PostFX_Copy_PS::g_main));
-
-		shader_tone = graphicsDevice->CreateShaderFromBinary(
-			PostFX_Basic_VS::g_main,
-			sizeof(PostFX_Basic_VS::g_main),
-			PostFX_Tonemap_PS::g_main,
-			sizeof(PostFX_Tonemap_PS::g_main));
-
-#endif
-	}
-	else
+	else if (graphicsDevice->GetDeviceName() == "DirectX11")
 	{
-		shader_copy = graphicsDevice->CreateShaderFromCodes(
-			{gl_postfx_basic_vs},
-			{gl_postfx_copy_ps},
-			uniformLayoutCopy);
-
-		shader_tone = graphicsDevice->CreateShaderFromCodes(
-			{gl_postfx_basic_vs},
-			{gl_postfx_tonemap_ps},
-			uniformLayoutTone);
+		shader_copy = graphicsDevice->CreateShaderFromBinary(dx11_postfx_basic_vs, sizeof(dx11_postfx_basic_vs), dx11_postfx_copy_ps, sizeof(dx11_postfx_copy_ps));
+		shader_tone = graphicsDevice->CreateShaderFromBinary(dx11_postfx_basic_vs, sizeof(dx11_postfx_basic_vs), dx11_postfx_tonemap_ps, sizeof(dx11_postfx_tonemap_ps));
 	}
+	else if (graphicsDevice->GetDeviceName() == "DirectX12")
+	{
+		shader_copy = graphicsDevice->CreateShaderFromBinary(LLGI_SHADER(dx12_postfx_basic_vs), LLGI_SHADER(dx12_postfx_copy_ps));
+		shader_tone = graphicsDevice->CreateShaderFromBinary(LLGI_SHADER(dx12_postfx_basic_vs), LLGI_SHADER(dx12_postfx_tonemap_ps));
+	}
+#endif
 
 	if (shader_copy != nullptr)
 	{
@@ -488,23 +405,20 @@ LinearToSRGBPostEffect::LinearToSRGBPostEffect(Backend::GraphicsDeviceRef graphi
 
 	Effekseer::Backend::ShaderRef shader;
 
-	if (graphicsDevice->GetDeviceName() == "DirectX11")
+	if (graphicsDevice->GetDeviceName() == "OpenGL")
 	{
+		shader = graphicsDevice->CreateShaderFromCodes({gl_postfx_basic_vs}, {gl_postfx_linear_to_srgb_ps}, uniformLayoutSingleImage);
+	}
 #ifdef _WIN32
-		shader = graphicsDevice->CreateShaderFromBinary(
-			PostFX_Basic_VS::g_main,
-			sizeof(PostFX_Basic_VS::g_main),
-			PostFX_LinearToSRGB_PS::g_main,
-			sizeof(PostFX_LinearToSRGB_PS::g_main));
-#endif
-	}
-	else
+	else if (graphicsDevice->GetDeviceName() == "DirectX11")
 	{
-		shader = graphicsDevice->CreateShaderFromCodes(
-			{gl_postfx_basic_vs},
-			{gl_postfx_linear_to_srgb_ps},
-			uniformLayoutSingleImage);
+		shader = graphicsDevice->CreateShaderFromBinary(dx11_postfx_basic_vs, sizeof(dx11_postfx_basic_vs), dx11_postfx_linear_to_srgb_ps, sizeof(dx11_postfx_linear_to_srgb_ps));
 	}
+	else if (graphicsDevice->GetDeviceName() == "DirectX12")
+	{
+		shader = graphicsDevice->CreateShaderFromBinary(LLGI_SHADER(dx12_postfx_basic_vs), LLGI_SHADER(dx12_postfx_linear_to_srgb_ps));
+	}
+#endif
 
 	if (shader != nullptr)
 	{
