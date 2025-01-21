@@ -110,7 +110,7 @@ Create(::Effekseer::Backend::GraphicsDeviceRef graphicsDevice, RenderPassInforma
 
 	key.DepthFormat = LLGI::VulkanHelper::VkFormatToTextureFormat(renderPassInformation.DepthFormat);
 
-	if (!renderer->Initialize(gd, key, false))
+	if (!renderer->Initialize(gd, key, true))
 	{
 		return nullptr;
 	}
