@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\context.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\input.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\monitor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\vulkan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\window.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\win32_init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\win32_joystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\win32_monitor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\win32_time.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\win32_thread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\win32_window.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\wgl_context.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\egl_context.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\osmesa_context.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\mappings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\Examples\Utils\glfw\src\glfw_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\include\GLFW\glfw3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\include\GLFW\glfw3native.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\win32_platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\win32_joystick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\wgl_context.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\egl_context.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\osmesa_context.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Utils\glfw\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4C1EBF80-A4E5-352E-9B8D-AAEF80534253}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4F1BDCF1-105A-3B27-A396-4CA2B2B4B8AE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

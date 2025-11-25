@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D25C56F4-10C9-3F62-92A3-F5139E20B64B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>LLGI</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\3rdParty\LLGI\src\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">LLGI.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">LLGId</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\3rdParty\LLGI\src\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">LLGI.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">LLGI</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\3rdParty\LLGI\src\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">LLGI.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">LLGI</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\3rdParty\LLGI\src\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">LLGI.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">LLGI</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);NOMINMAX;WIN32;_WINDOWS;ENABLE_VULKAN;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;NOMINMAX;_WINDOWS;ENABLE_VULKAN;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);NOMINMAX;WIN32;_WINDOWS;NDEBUG;ENABLE_VULKAN;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;NOMINMAX;_WINDOWS;NDEBUG;ENABLE_VULKAN;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);NOMINMAX;WIN32;_WINDOWS;NDEBUG;ENABLE_VULKAN;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;NOMINMAX;_WINDOWS;NDEBUG;ENABLE_VULKAN;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);NOMINMAX;WIN32;_WINDOWS;NDEBUG;ENABLE_VULKAN;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;NOMINMAX;_WINDOWS;NDEBUG;ENABLE_VULKAN;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/src/3rdParty/LLGI/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp -BE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64 --check-stamp-file E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/src/3rdParty/LLGI/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindVulkan.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\3rdParty\LLGI\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/src/3rdParty/LLGI/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp -BE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64 --check-stamp-file E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/src/3rdParty/LLGI/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindVulkan.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\3rdParty\LLGI\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/src/3rdParty/LLGI/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp -BE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64 --check-stamp-file E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/src/3rdParty/LLGI/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindVulkan.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\3rdParty\LLGI\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/src/3rdParty/LLGI/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp -BE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64 --check-stamp-file E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/src/3rdParty/LLGI/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindVulkan.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\3rdParty\LLGI\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Base.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Buffer.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Buffer.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.CommandList.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.CommandList.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Compiler.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Compiler.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Graphics.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Graphics.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.PipelineState.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.PipelineState.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Platform.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Platform.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Query.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Query.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Shader.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Texture.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Texture.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\PC\LLGI.CreatePC.cpp" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Win\LLGI.WindowWin.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Win\LLGI.WindowWin.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.BaseDX12.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.BaseDX12.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.BufferDX12.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.BufferDX12.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.CommandListDX12.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.CommandListDX12.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.CompilerDX12.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.CompilerDX12.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.DescriptorHeapDX12.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.DescriptorHeapDX12.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.GraphicsDX12.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.GraphicsDX12.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.PipelineStateDX12.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.PipelineStateDX12.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.PlatformDX12.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.PlatformDX12.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.QueryDX12.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.QueryDX12.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.RenderPassDX12.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.RenderPassDX12.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.RenderPassPipelineStateDX12.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.RenderPassPipelineStateDX12.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.ShaderDX12.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.ShaderDX12.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.SingleFrameMemoryPoolDX12.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.SingleFrameMemoryPoolDX12.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.TextureDX12.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.TextureDX12.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.BaseVulkan.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.BaseVulkan.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.BufferVulkan.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.BufferVulkan.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.CommandListVulkan.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.CommandListVulkan.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.CompilerVulkan.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.CompilerVulkan.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.GraphicsVulkan.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.GraphicsVulkan.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.PipelineStateVulkan.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.PipelineStateVulkan.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.PlatformVulkan.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.PlatformVulkan.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.QueryVulkan.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.QueryVulkan.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.RenderPassPipelineStateCacheVulkan.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.RenderPassPipelineStateCacheVulkan.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.RenderPassVulkan.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.RenderPassVulkan.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.ShaderVulkan.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.ShaderVulkan.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.SingleFrameMemoryPoolVulkan.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.SingleFrameMemoryPoolVulkan.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.TextureVulkan.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.TextureVulkan.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\ZERO_CHECK.vcxproj">
+      <Project>{AE0F7A36-57EF-37C0-9D3B-22B0600D4C01}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

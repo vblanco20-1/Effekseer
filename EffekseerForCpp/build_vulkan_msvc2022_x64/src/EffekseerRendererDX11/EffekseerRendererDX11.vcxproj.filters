@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.DeviceObject.cpp">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.GpuParticles.cpp">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.GpuTimer.cpp">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.MaterialLoader.cpp">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.ModelRenderer.cpp">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.RenderState.cpp">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.Renderer.cpp">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.Shader.cpp">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\GraphicsDevice.cpp">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerMaterialCompiler\DirectX11\EffekseerMaterialCompilerDX11.cpp">
+      <Filter>..\EffekseerMaterialCompiler\DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerMaterialCompiler\HLSLGenerator\ShaderGenerator.cpp">
+      <Filter>..\EffekseerMaterialCompiler\HLSLGenerator</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerMaterialCompiler\Common\ShaderGeneratorCommon.cpp">
+      <Filter>..\EffekseerMaterialCompiler\Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.Base.Pre.h">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.Base.h">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.DeviceObject.h">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.GpuParticles.h">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.GpuTimer.h">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.MaterialLoader.h">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.ModelRenderer.h">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.RenderState.h">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.Renderer.h">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.RendererImplemented.h">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\EffekseerRendererDX11.Shader.h">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\GraphicsDevice.h">
+      <Filter>EffekseerRendererDX11</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\ad_model_distortion_ps.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\ad_model_distortion_vs.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\ad_model_lit_ps.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\ad_model_lit_vs.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\ad_model_unlit_ps.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\ad_model_unlit_vs.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\ad_sprite_distortion_vs.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\ad_sprite_lit_vs.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\ad_sprite_unlit_vs.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\gpu_particles_clear_cs.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\gpu_particles_render_ps.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\gpu_particles_render_vs.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\gpu_particles_spawn_cs.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\gpu_particles_update_cs.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\model_distortion_ps.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\model_distortion_vs.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\model_lit_ps.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\model_lit_vs.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\model_unlit_ps.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\model_unlit_vs.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\sprite_distortion_vs.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\sprite_lit_vs.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\EffekseerRendererDX11\ShaderHeader\sprite_unlit_vs.h">
+      <Filter>EffekseerRendererDX11\ShaderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerMaterialCompiler\DirectX11\EffekseerMaterialCompilerDX11.h">
+      <Filter>..\EffekseerMaterialCompiler\DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerMaterialCompiler\HLSLGenerator\ShaderGenerator.h">
+      <Filter>..\EffekseerMaterialCompiler\HLSLGenerator</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerMaterialCompiler\Common\ShaderGeneratorCommon.h">
+      <Filter>..\EffekseerMaterialCompiler\Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererDX11\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{184726A4-C7A3-3401-9CA4-BD9634FF60A5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\EffekseerMaterialCompiler">
+      <UniqueIdentifier>{98E24226-1E64-3CC8-8F74-69C3F60A9F56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\EffekseerMaterialCompiler\Common">
+      <UniqueIdentifier>{039CEFFB-239E-3EE3-AE0B-FA5CF9074C99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\EffekseerMaterialCompiler\DirectX11">
+      <UniqueIdentifier>{5B4EACEC-0FAE-355F-94A9-24C2459099F2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\EffekseerMaterialCompiler\HLSLGenerator">
+      <UniqueIdentifier>{C695CFBB-0AB1-37D9-8C2A-AC5DDFF2072D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EffekseerRendererDX11">
+      <UniqueIdentifier>{CC0DA0DA-278B-3625-98C4-A3D342970858}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EffekseerRendererDX11\ShaderHeader">
+      <UniqueIdentifier>{FB3685C1-3161-3E3E-A8D5-384DE3E05318}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

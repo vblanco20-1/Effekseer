@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{368286BD-6AE5-3794-A9CB-9A31BA49DF92}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>EffekseerRendererGL</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\EffekseerRendererGL\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">EffekseerRendererGL.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">EffekseerRendererGLd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\EffekseerRendererGL\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">EffekseerRendererGL.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">EffekseerRendererGL</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\EffekseerRendererGL\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">EffekseerRendererGL.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">EffekseerRendererGL</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\EffekseerRendererGL\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">EffekseerRendererGL.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">EffekseerRendererGL</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/src/EffekseerRendererGL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp -BE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64 --check-stamp-file E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/src/EffekseerRendererGL/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\EffekseerRendererGL\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/src/EffekseerRendererGL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp -BE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64 --check-stamp-file E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/src/EffekseerRendererGL/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\EffekseerRendererGL\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/src/EffekseerRendererGL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp -BE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64 --check-stamp-file E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/src/EffekseerRendererGL/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\EffekseerRendererGL\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/src/EffekseerRendererGL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp -BE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64 --check-stamp-file E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/src/EffekseerRendererGL/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\EffekseerRendererGL\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.Base.Pre.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.Base.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.DeviceObject.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.GLExtension.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.GpuTimer.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.MaterialLoader.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.ModelRenderer.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.RenderState.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.Renderer.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.RendererImplemented.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.Shader.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\GraphicsDevice.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\ShaderHeader\ad_model_distortion_ps.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\ShaderHeader\ad_model_distortion_vs.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\ShaderHeader\ad_model_lit_ps.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\ShaderHeader\ad_model_lit_vs.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\ShaderHeader\ad_model_unlit_ps.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\ShaderHeader\ad_model_unlit_vs.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\ShaderHeader\ad_sprite_distortion_vs.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\ShaderHeader\ad_sprite_lit_vs.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\ShaderHeader\ad_sprite_unlit_vs.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\ShaderHeader\model_distortion_ps.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\ShaderHeader\model_distortion_vs.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\ShaderHeader\model_lit_ps.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\ShaderHeader\model_lit_vs.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\ShaderHeader\model_unlit_ps.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\ShaderHeader\model_unlit_vs.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\ShaderHeader\sprite_distortion_vs.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\ShaderHeader\sprite_lit_vs.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\ShaderHeader\sprite_unlit_vs.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerMaterialCompiler\OpenGL\EffekseerMaterialCompilerGL.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.DeviceObject.cpp" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.GLExtension.cpp" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.GpuTimer.cpp" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.MaterialLoader.cpp" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.ModelRenderer.cpp" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.RenderState.cpp" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.Renderer.cpp" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\EffekseerRendererGL.Shader.cpp" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererGL\EffekseerRendererGL\GraphicsDevice.cpp" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerMaterialCompiler\OpenGL\EffekseerMaterialCompilerGL.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerMaterialCompiler\GLSLGenerator\ShaderGenerator.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerMaterialCompiler\GLSLGenerator\ShaderGenerator.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerMaterialCompiler\Common\ShaderGeneratorCommon.h" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerMaterialCompiler\Common\ShaderGeneratorCommon.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\ZERO_CHECK.vcxproj">
+      <Project>{AE0F7A36-57EF-37C0-9D3B-22B0600D4C01}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\Effekseer\Effekseer.vcxproj">
+      <Project>{8A4E1A50-9085-3042-934A-D5429E5DA7FA}</Project>
+      <Name>Effekseer</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\EffekseerRendererCommon\EffekseerRendererCommon.vcxproj">
+      <Project>{BC3FD2E4-3641-3E94-B87B-84BA261C10AA}</Project>
+      <Name>EffekseerRendererCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

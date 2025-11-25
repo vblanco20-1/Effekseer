@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Buffer.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.CommandList.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Compiler.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Graphics.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.PipelineState.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Platform.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Query.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Texture.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\PC\LLGI.CreatePC.cpp">
+      <Filter>PC</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Win\LLGI.WindowWin.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.BaseDX12.cpp">
+      <Filter>DX12</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.BufferDX12.cpp">
+      <Filter>DX12</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.CommandListDX12.cpp">
+      <Filter>DX12</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.CompilerDX12.cpp">
+      <Filter>DX12</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.DescriptorHeapDX12.cpp">
+      <Filter>DX12</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.GraphicsDX12.cpp">
+      <Filter>DX12</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.PipelineStateDX12.cpp">
+      <Filter>DX12</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.PlatformDX12.cpp">
+      <Filter>DX12</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.QueryDX12.cpp">
+      <Filter>DX12</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.RenderPassDX12.cpp">
+      <Filter>DX12</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.RenderPassPipelineStateDX12.cpp">
+      <Filter>DX12</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.ShaderDX12.cpp">
+      <Filter>DX12</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.SingleFrameMemoryPoolDX12.cpp">
+      <Filter>DX12</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.TextureDX12.cpp">
+      <Filter>DX12</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.BaseVulkan.cpp">
+      <Filter>Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.BufferVulkan.cpp">
+      <Filter>Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.CommandListVulkan.cpp">
+      <Filter>Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.CompilerVulkan.cpp">
+      <Filter>Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.GraphicsVulkan.cpp">
+      <Filter>Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.PipelineStateVulkan.cpp">
+      <Filter>Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.PlatformVulkan.cpp">
+      <Filter>Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.QueryVulkan.cpp">
+      <Filter>Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.RenderPassPipelineStateCacheVulkan.cpp">
+      <Filter>Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.RenderPassVulkan.cpp">
+      <Filter>Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.ShaderVulkan.cpp">
+      <Filter>Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.SingleFrameMemoryPoolVulkan.cpp">
+      <Filter>Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.TextureVulkan.cpp">
+      <Filter>Vulkan</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Base.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Buffer.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.CommandList.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Compiler.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Graphics.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.PipelineState.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Platform.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Query.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Shader.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\LLGI.Texture.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Win\LLGI.WindowWin.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.BaseDX12.h">
+      <Filter>DX12</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.BufferDX12.h">
+      <Filter>DX12</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.CommandListDX12.h">
+      <Filter>DX12</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.CompilerDX12.h">
+      <Filter>DX12</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.DescriptorHeapDX12.h">
+      <Filter>DX12</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.GraphicsDX12.h">
+      <Filter>DX12</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.PipelineStateDX12.h">
+      <Filter>DX12</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.PlatformDX12.h">
+      <Filter>DX12</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.QueryDX12.h">
+      <Filter>DX12</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.RenderPassDX12.h">
+      <Filter>DX12</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.RenderPassPipelineStateDX12.h">
+      <Filter>DX12</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.ShaderDX12.h">
+      <Filter>DX12</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.SingleFrameMemoryPoolDX12.h">
+      <Filter>DX12</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\DX12\LLGI.TextureDX12.h">
+      <Filter>DX12</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.BaseVulkan.h">
+      <Filter>Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.BufferVulkan.h">
+      <Filter>Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.CommandListVulkan.h">
+      <Filter>Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.CompilerVulkan.h">
+      <Filter>Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.GraphicsVulkan.h">
+      <Filter>Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.PipelineStateVulkan.h">
+      <Filter>Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.PlatformVulkan.h">
+      <Filter>Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.QueryVulkan.h">
+      <Filter>Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.RenderPassPipelineStateCacheVulkan.h">
+      <Filter>Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.RenderPassVulkan.h">
+      <Filter>Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.ShaderVulkan.h">
+      <Filter>Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.SingleFrameMemoryPoolVulkan.h">
+      <Filter>Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\Vulkan\LLGI.TextureVulkan.h">
+      <Filter>Vulkan</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Base">
+      <UniqueIdentifier>{F100FFE1-0408-3B8D-950E-2EED167C365F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX12">
+      <UniqueIdentifier>{DBA4FE1D-9346-3C27-86DF-7E6640A88C9A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PC">
+      <UniqueIdentifier>{C2B557CF-026B-3D73-B0DE-0F23C7CE1667}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vulkan">
+      <UniqueIdentifier>{C113188C-FD80-38CB-AE3C-D5501F6D7639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Win">
+      <UniqueIdentifier>{6F31D4E6-46AF-33C5-ADC3-EBB475B35E1B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

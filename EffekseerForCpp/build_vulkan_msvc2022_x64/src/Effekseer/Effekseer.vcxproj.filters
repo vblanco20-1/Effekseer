@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Color.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.CurveLoader.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.DefaultEffectLoader.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.DefaultFile.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Effect.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.EffectNode.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.EffectNodeModel.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.EffectNodeRibbon.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.EffectNodeRing.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.EffectNodeRoot.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.EffectNodeSprite.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.EffectNodeTrack.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.FCurves.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Instance.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.InstanceChunk.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.InstanceContainer.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.InstanceGlobal.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.InstanceGroup.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.InternalScript.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Manager.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Matrix43.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Matrix44.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Random.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.RectF.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Resource.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.ResourceManager.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Setting.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Vector2D.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Vector3D.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.WorkerThread.cpp">
+      <Filter>Effekseer</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Material\Effekseer.MaterialFile.cpp">
+      <Filter>Effekseer\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Material\Effekseer.CompiledMaterial.cpp">
+      <Filter>Effekseer\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Material\Effekseer.MaterialCompiler.cpp">
+      <Filter>Effekseer\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\IO\Effekseer.EfkEfcFactory.cpp">
+      <Filter>Effekseer\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\Collisions.cpp">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\Easing.cpp">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\Effekseer.Parameters.cpp">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\KillRules.cpp">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\GpuParticlesParameter.cpp">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\Rotation.cpp">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Utils\Effekseer.CustomAllocator.cpp">
+      <Filter>Effekseer\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Mat43f.cpp">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Mat44f.cpp">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Utils.cpp">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Noise\CurlNoise.cpp">
+      <Filter>Effekseer\Noise</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\ForceField\ForceFields.cpp">
+      <Filter>Effekseer\ForceField</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Model\ProceduralModelGenerator.cpp">
+      <Filter>Effekseer\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Model\Model.cpp">
+      <Filter>Effekseer\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Model\ModelLoader.cpp">
+      <Filter>Effekseer\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Model\SplineGenerator.cpp">
+      <Filter>Effekseer\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Model\PointCacheGenerator.cpp">
+      <Filter>Effekseer\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Network\Effekseer.Client.cpp">
+      <Filter>Effekseer\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Network\Effekseer.Server.cpp">
+      <Filter>Effekseer\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Network\Effekseer.Session.cpp">
+      <Filter>Effekseer\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Network\Effekseer.Socket.cpp">
+      <Filter>Effekseer\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\VectorField\VectorField.cpp">
+      <Filter>Effekseer\VectorField</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\VectorField\VectorFieldLoader.cpp">
+      <Filter>Effekseer\VectorField</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer.Modules.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer.SIMD.h" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Base.Pre.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Effect.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Color.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.DefaultFile.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.File.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Manager.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Math.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Matrix43.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Matrix44.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Resource.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.RectF.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Setting.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Vector2D.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Vector3D.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Backend\GraphicsDevice.h">
+      <Filter>Effekseer\Backend</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Network\Effekseer.Server.h">
+      <Filter>Effekseer\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Network\Effekseer.Client.h">
+      <Filter>Effekseer\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Utils\Effekseer.CustomAllocator.h">
+      <Filter>Effekseer\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Utils\String.h">
+      <Filter>Effekseer\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\IO\Effekseer.EfkEfcFactory.h">
+      <Filter>Effekseer\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Base.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Float4.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Float4_Gen.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Float4_NEON.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Float4_SSE.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Int4.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Int4_Gen.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Int4_NEON.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Int4_SSE.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Bridge.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Bridge_Gen.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Bridge_NEON.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Bridge_SSE.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Vec2f.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Vec3f.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Vec4f.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Mat43f.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Mat44f.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Quaternionf.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\SIMD\Utils.h">
+      <Filter>Effekseer\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\Effekseer.Parameters.h">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Renderer\Effekseer.SpriteRenderer.h">
+      <Filter>Effekseer\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Renderer\Effekseer.RibbonRenderer.h">
+      <Filter>Effekseer\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Renderer\Effekseer.RingRenderer.h">
+      <Filter>Effekseer\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Renderer\Effekseer.ModelRenderer.h">
+      <Filter>Effekseer\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Renderer\Effekseer.TrackRenderer.h">
+      <Filter>Effekseer\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Renderer\Effekseer.GpuTimer.h">
+      <Filter>Effekseer\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Renderer\Effekseer.GpuParticles.h">
+      <Filter>Effekseer\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.EffectLoader.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.TextureLoader.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Model\Model.h">
+      <Filter>Effekseer\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Model\ModelLoader.h">
+      <Filter>Effekseer\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.MaterialLoader.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Curve.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.CurveLoader.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Sound\Effekseer.SoundPlayer.h">
+      <Filter>Effekseer\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.SoundLoader.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.WorkerThread.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.ResourceManager.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Base.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.DefaultEffectLoader.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.EffectImplemented.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.EffectNode.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.EffectNodeModel.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.EffectNodeRibbon.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.EffectNodeRing.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.EffectNodeRoot.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.EffectNodeSprite.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.EffectNodeTrack.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.FCurves.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Instance.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.InstanceChunk.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.InstanceContainer.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.InstanceGlobal.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.InstanceGroup.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.InternalScript.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.InternalStruct.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.IntrusiveList.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.ManagerImplemented.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Effekseer.Random.h">
+      <Filter>Effekseer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\ForceField\ForceFields.h">
+      <Filter>Effekseer\ForceField</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Material\Effekseer.CompiledMaterial.h">
+      <Filter>Effekseer\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Material\Effekseer.MaterialCompiler.h">
+      <Filter>Effekseer\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Material\Effekseer.MaterialFile.h">
+      <Filter>Effekseer\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Model\PointCacheGenerator.h">
+      <Filter>Effekseer\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Model\ProceduralModelGenerator.h">
+      <Filter>Effekseer\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Model\ProceduralModelParameter.h">
+      <Filter>Effekseer\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Model\SplineGenerator.h">
+      <Filter>Effekseer\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Network\Effekseer.ClientImplemented.h">
+      <Filter>Effekseer\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Network\Effekseer.ServerImplemented.h">
+      <Filter>Effekseer\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Network\Effekseer.Session.h">
+      <Filter>Effekseer\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Network\Effekseer.Socket.h">
+      <Filter>Effekseer\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Network\data\profiler_generated.h">
+      <Filter>Effekseer\Network\data</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Network\data\reload_generated.h">
+      <Filter>Effekseer\Network\data</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Noise\CurlNoise.h">
+      <Filter>Effekseer\Noise</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Noise\PerlinNoise.h">
+      <Filter>Effekseer\Noise</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\AllTypeColor.h">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\AlphaCutoff.h">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\BasicSettings.h">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\Collisions.h">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\CustomData.h">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\DepthParameter.h">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\DynamicParameter.h">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\Easing.h">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\GpuParticlesParameter.h">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\KillRules.h">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\LOD.h">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\Rotation.h">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\Scaling.h">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\Sound.h">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\SpawnMethod.h">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\Translation.h">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Parameter\UV.h">
+      <Filter>Effekseer\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Renderer\Effekseer.ParticleRenderer.h">
+      <Filter>Effekseer\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Utils\BinaryVersion.h">
+      <Filter>Effekseer\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Utils\Compatiblity.h">
+      <Filter>Effekseer\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Utils\Effekseer.BinaryReader.h">
+      <Filter>Effekseer\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Utils\InstancePool.h">
+      <Filter>Effekseer\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\Utils\Profiler.h">
+      <Filter>Effekseer\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\VectorField\VectorField.h">
+      <Filter>Effekseer\VectorField</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\Effekseer\VectorField\VectorFieldLoader.h">
+      <Filter>Effekseer\VectorField</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Effekseer">
+      <UniqueIdentifier>{98A1D503-28F2-36E9-A807-F82D67313792}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effekseer\Backend">
+      <UniqueIdentifier>{F73A25AD-9961-38A1-BF81-BBF68210A42D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effekseer\ForceField">
+      <UniqueIdentifier>{CA0DB767-DE89-38C3-B77B-5EE173EA2A31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effekseer\IO">
+      <UniqueIdentifier>{D59277E2-506B-3BC3-AD37-29DB29A8EDEA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effekseer\Material">
+      <UniqueIdentifier>{64C1C83A-6B50-3A16-B252-D88901607432}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effekseer\Model">
+      <UniqueIdentifier>{89A329B4-0495-3D46-B4FC-ABAD868ED70F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effekseer\Network">
+      <UniqueIdentifier>{3BF162F7-6799-3CD5-8758-2C834884F8B2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effekseer\Network\data">
+      <UniqueIdentifier>{33F608D3-57A7-38F2-B621-CC9A59C9D3B5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effekseer\Noise">
+      <UniqueIdentifier>{7A0889A2-4153-3743-91F3-C46BE8B3F848}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effekseer\Parameter">
+      <UniqueIdentifier>{0227AB94-6AFE-36DA-ACC5-57F372138A7B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effekseer\Renderer">
+      <UniqueIdentifier>{8D8F628B-FBCA-3C6E-9B59-C0A9F8C10560}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effekseer\SIMD">
+      <UniqueIdentifier>{2B0AC93A-00DD-39F2-9763-569155A0D8C1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effekseer\Sound">
+      <UniqueIdentifier>{7ED03F07-B0BD-3BB6-9DC4-B6612DDFBD3E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effekseer\Utils">
+      <UniqueIdentifier>{19E987FE-20F4-37DA-9E3A-28E42BEF78A6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effekseer\VectorField">
+      <UniqueIdentifier>{3CC7C525-E8C9-3F49-BC7D-4DF13CA6F420}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

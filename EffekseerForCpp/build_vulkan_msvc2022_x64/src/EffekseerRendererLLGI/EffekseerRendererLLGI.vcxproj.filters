@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\Common.cpp">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\EffekseerRendererLLGI.GpuTimer.cpp">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\EffekseerRendererLLGI.GpuParticles.cpp">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\EffekseerRendererLLGI.MaterialLoader.cpp">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\EffekseerRendererLLGI.ModelRenderer.cpp">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\EffekseerRendererLLGI.Renderer.cpp">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\EffekseerRendererLLGI.RenderState.cpp">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\EffekseerRendererLLGI.Shader.cpp">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\GraphicsDevice.cpp">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\Common.h">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\EffekseerRendererLLGI.Base.h">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\EffekseerRendererLLGI.Base.Pre.h">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\EffekseerRendererLLGI.GpuTimer.h">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\EffekseerRendererLLGI.GpuParticles.h">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\EffekseerRendererLLGI.MaterialLoader.h">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\EffekseerRendererLLGI.ModelRenderer.h">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\EffekseerRendererLLGI.Renderer.h">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\EffekseerRendererLLGI.RendererImplemented.h">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\EffekseerRendererLLGI.RenderState.h">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\EffekseerRendererLLGI.Shader.h">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\EffekseerRendererLLGI\GraphicsDevice.h">
+      <Filter>EffekseerRendererLLGI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="EffekseerRendererLLGI">
+      <UniqueIdentifier>{5D70251A-75E5-373D-B342-8ABB708E3B10}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

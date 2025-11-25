@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\x64\Release\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\Examples\Distortion\Release\Example_Distortion.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

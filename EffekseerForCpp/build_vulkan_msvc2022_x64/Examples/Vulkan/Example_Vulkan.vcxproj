@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{440D0DB2-ADD6-3A54-8453-AE283F7C5D76}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>Example_Vulkan</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\Examples\Vulkan\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Example_Vulkan.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Example_Vulkan</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\Examples\Vulkan\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Example_Vulkan.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Example_Vulkan</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\Examples\Vulkan\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Example_Vulkan.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Example_Vulkan</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\Examples\Vulkan\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Example_Vulkan.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Example_Vulkan</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererVulkan;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Vulkan\..\Utils;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;EFK_EXAMPLE_ASSETS_DIR="E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Resources/";EFK_EXAMPLE_ASSETS_DIR_U16=u"E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Resources/";CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;EFK_EXAMPLE_ASSETS_DIR=\"E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Resources/\";EFK_EXAMPLE_ASSETS_DIR_U16=u\"E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Resources/\";CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererVulkan;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Vulkan\..\Utils;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererVulkan;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Vulkan\..\Utils;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\src\Effekseer\Debug\Effekseerd.lib;..\..\src\3rdParty\LLGI\src\Debug\LLGId.lib;..\..\src\EffekseerRendererVulkan\Debug\EffekseerRendererVulkand.lib;..\Utils\Debug\Example_Utilsd.lib;C:\VulkanSDK\1.3.296.0\Lib\vulkan-1.lib;glslang.lib;glslang-default-resource-limits.lib;SPIRV.lib;OSDependent.lib;..\..\src\EffekseerRendererLLGI\Debug\EffekseerRendererLLGId.lib;..\..\src\3rdParty\LLGI\src\Debug\LLGId.lib;C:\VulkanSDK\1.3.296.0\Lib\vulkan-1.lib;..\..\src\EffekseerRendererCommon\Debug\EffekseerRendererCommond.lib;..\..\src\Effekseer\Debug\Effekseerd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/../../Dev/Cpp/3rdParty/LLGI/EP/Install/glslang/lib;E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/../../Dev/Cpp/3rdParty/LLGI/EP/Install/glslang/lib/$(Configuration);C:\VulkanSDK\1.3.296.0\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/Debug/Example_Vulkan.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/Debug/Example_Vulkan.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererVulkan;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Vulkan\..\Utils;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;EFK_EXAMPLE_ASSETS_DIR="E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Resources/";EFK_EXAMPLE_ASSETS_DIR_U16=u"E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Resources/";CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;EFK_EXAMPLE_ASSETS_DIR=\"E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Resources/\";EFK_EXAMPLE_ASSETS_DIR_U16=u\"E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Resources/\";CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererVulkan;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Vulkan\..\Utils;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererVulkan;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Vulkan\..\Utils;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\src\Effekseer\Release\Effekseer.lib;..\..\src\3rdParty\LLGI\src\Release\LLGI.lib;..\..\src\EffekseerRendererVulkan\Release\EffekseerRendererVulkan.lib;..\Utils\Release\Example_Utils.lib;C:\VulkanSDK\1.3.296.0\Lib\vulkan-1.lib;glslang.lib;glslang-default-resource-limits.lib;SPIRV.lib;OSDependent.lib;..\..\src\EffekseerRendererLLGI\Release\EffekseerRendererLLGI.lib;..\..\src\3rdParty\LLGI\src\Release\LLGI.lib;C:\VulkanSDK\1.3.296.0\Lib\vulkan-1.lib;..\..\src\EffekseerRendererCommon\Release\EffekseerRendererCommon.lib;..\..\src\Effekseer\Release\Effekseer.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/../../Dev/Cpp/3rdParty/LLGI/EP/Install/glslang/lib;E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/../../Dev/Cpp/3rdParty/LLGI/EP/Install/glslang/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/Release/Example_Vulkan.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/Release/Example_Vulkan.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererVulkan;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Vulkan\..\Utils;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;EFK_EXAMPLE_ASSETS_DIR="E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Resources/";EFK_EXAMPLE_ASSETS_DIR_U16=u"E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Resources/";CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;EFK_EXAMPLE_ASSETS_DIR=\"E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Resources/\";EFK_EXAMPLE_ASSETS_DIR_U16=u\"E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Resources/\";CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererVulkan;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Vulkan\..\Utils;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererVulkan;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Vulkan\..\Utils;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\src\Effekseer\MinSizeRel\Effekseer.lib;..\..\src\3rdParty\LLGI\src\MinSizeRel\LLGI.lib;..\..\src\EffekseerRendererVulkan\MinSizeRel\EffekseerRendererVulkan.lib;..\Utils\MinSizeRel\Example_Utils.lib;C:\VulkanSDK\1.3.296.0\Lib\vulkan-1.lib;glslang.lib;glslang-default-resource-limits.lib;SPIRV.lib;OSDependent.lib;..\..\src\EffekseerRendererLLGI\MinSizeRel\EffekseerRendererLLGI.lib;..\..\src\3rdParty\LLGI\src\MinSizeRel\LLGI.lib;C:\VulkanSDK\1.3.296.0\Lib\vulkan-1.lib;..\..\src\EffekseerRendererCommon\MinSizeRel\EffekseerRendererCommon.lib;..\..\src\Effekseer\MinSizeRel\Effekseer.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/../../Dev/Cpp/3rdParty/LLGI/EP/Install/glslang/lib;E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/../../Dev/Cpp/3rdParty/LLGI/EP/Install/glslang/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/MinSizeRel/Example_Vulkan.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/MinSizeRel/Example_Vulkan.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererVulkan;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Vulkan\..\Utils;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;EFK_EXAMPLE_ASSETS_DIR="E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Resources/";EFK_EXAMPLE_ASSETS_DIR_U16=u"E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Resources/";CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;EFK_EXAMPLE_ASSETS_DIR=\"E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Resources/\";EFK_EXAMPLE_ASSETS_DIR_U16=u\"E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Resources/\";CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererVulkan;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Vulkan\..\Utils;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.3.296.0\Include;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\Effekseer;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererVulkan;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\3rdParty\LLGI\src;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Vulkan\..\Utils;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererCommon;E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerRendererLLGI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\src\Effekseer\RelWithDebInfo\Effekseer.lib;..\..\src\3rdParty\LLGI\src\RelWithDebInfo\LLGI.lib;..\..\src\EffekseerRendererVulkan\RelWithDebInfo\EffekseerRendererVulkan.lib;..\Utils\RelWithDebInfo\Example_Utils.lib;C:\VulkanSDK\1.3.296.0\Lib\vulkan-1.lib;glslang.lib;glslang-default-resource-limits.lib;SPIRV.lib;OSDependent.lib;..\..\src\EffekseerRendererLLGI\RelWithDebInfo\EffekseerRendererLLGI.lib;..\..\src\3rdParty\LLGI\src\RelWithDebInfo\LLGI.lib;C:\VulkanSDK\1.3.296.0\Lib\vulkan-1.lib;..\..\src\EffekseerRendererCommon\RelWithDebInfo\EffekseerRendererCommon.lib;..\..\src\Effekseer\RelWithDebInfo\Effekseer.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/../../Dev/Cpp/3rdParty/LLGI/EP/Install/glslang/lib;E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/../../Dev/Cpp/3rdParty/LLGI/EP/Install/glslang/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/RelWithDebInfo/Example_Vulkan.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/RelWithDebInfo/Example_Vulkan.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Vulkan\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Vulkan/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp -BE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64 --check-stamp-file E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindVulkan.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\Examples\Vulkan\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Vulkan/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp -BE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64 --check-stamp-file E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindVulkan.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\Examples\Vulkan\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Vulkan/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp -BE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64 --check-stamp-file E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindVulkan.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\Examples\Vulkan\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/Examples/Vulkan/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp -BE:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64 --check-stamp-file E:/ProgrammingProjects/advnGame/third_party/Effekseer/EffekseerForCpp/build_vulkan_msvc2022_x64/Examples/Vulkan/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindVulkan.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\Examples\Vulkan\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Vulkan\main.cpp" />
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Vulkan\DeviceVulkan.cpp" />
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\Examples\Vulkan\DeviceVulkan.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\ZERO_CHECK.vcxproj">
+      <Project>{AE0F7A36-57EF-37C0-9D3B-22B0600D4C01}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\Effekseer\Effekseer.vcxproj">
+      <Project>{8A4E1A50-9085-3042-934A-D5429E5DA7FA}</Project>
+      <Name>Effekseer</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\EffekseerRendererCommon\EffekseerRendererCommon.vcxproj">
+      <Project>{BC3FD2E4-3641-3E94-B87B-84BA261C10AA}</Project>
+      <Name>EffekseerRendererCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\EffekseerRendererLLGI\EffekseerRendererLLGI.vcxproj">
+      <Project>{FB3EFC20-D705-37E3-8698-B49D6BF858D1}</Project>
+      <Name>EffekseerRendererLLGI</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\EffekseerRendererVulkan\EffekseerRendererVulkan.vcxproj">
+      <Project>{CD472F22-48FF-3B39-B3B6-DC23172E24F1}</Project>
+      <Name>EffekseerRendererVulkan</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\Examples\Utils\Example_Utils.vcxproj">
+      <Project>{2C926309-90DB-3A85-8FDD-A6B05EABCD65}</Project>
+      <Name>Example_Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\build_vulkan_msvc2022_x64\src\3rdParty\LLGI\src\LLGI.vcxproj">
+      <Project>{D25C56F4-10C9-3F62-92A3-F5139E20B64B}</Project>
+      <Name>LLGI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

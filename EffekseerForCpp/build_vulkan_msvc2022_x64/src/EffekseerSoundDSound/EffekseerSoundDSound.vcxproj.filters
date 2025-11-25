@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerSoundDSound\EffekseerSoundDSound\EffekseerSoundDSound.Sound.cpp">
+      <Filter>EffekseerSoundDSound</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerSoundDSound\EffekseerSoundDSound\EffekseerSoundDSound.SoundLoader.cpp">
+      <Filter>EffekseerSoundDSound</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerSoundDSound\EffekseerSoundDSound\EffekseerSoundDSound.SoundPlayer.cpp">
+      <Filter>EffekseerSoundDSound</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerSoundDSound\EffekseerSoundDSound\EffekseerSoundDSound.SoundVoice.cpp">
+      <Filter>EffekseerSoundDSound</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerSoundDSound\EffekseerSoundDSound\EffekseerSoundDSound.SoundImplemented.h">
+      <Filter>EffekseerSoundDSound</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerSoundDSound\EffekseerSoundDSound\EffekseerSoundDSound.SoundLoader.h">
+      <Filter>EffekseerSoundDSound</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerSoundDSound\EffekseerSoundDSound\EffekseerSoundDSound.SoundPlayer.h">
+      <Filter>EffekseerSoundDSound</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerSoundDSound\EffekseerSoundDSound\EffekseerSoundDSound.SoundVoice.h">
+      <Filter>EffekseerSoundDSound</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\ProgrammingProjects\advnGame\third_party\Effekseer\EffekseerForCpp\src\EffekseerSoundDSound\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="EffekseerSoundDSound">
+      <UniqueIdentifier>{1B062C84-29F4-374D-BA57-4763D6493988}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
