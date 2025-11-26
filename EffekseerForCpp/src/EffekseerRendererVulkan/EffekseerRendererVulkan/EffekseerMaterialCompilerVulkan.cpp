@@ -1,7 +1,7 @@
 #include "EffekseerMaterialCompilerVulkan.h"
 #include <iostream>
 
-#include "../3rdParty/LLGI/src/Vulkan/LLGI.CompilerVulkan.h"
+#include "Vulkan/LLGI.CompilerVulkan.h"
 
 #include "../EffekseerMaterialCompiler/GLSLGenerator/ShaderGenerator.h"
 

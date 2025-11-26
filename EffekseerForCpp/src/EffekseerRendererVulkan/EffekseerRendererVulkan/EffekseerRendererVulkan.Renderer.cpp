@@ -1,6 +1,6 @@
 ﻿#include "EffekseerRendererVulkan.Renderer.h"
-#include "../../3rdParty/LLGI/src/Vulkan/LLGI.CommandListVulkan.h"
-#include "../../3rdParty/LLGI/src/Vulkan/LLGI.GraphicsVulkan.h"
+#include "Vulkan/LLGI.CommandListVulkan.h"
+#include "Vulkan/LLGI.GraphicsVulkan.h"
 #include "EffekseerMaterialCompilerVulkan.h"
 #include <EffekseerRendererLLGI/EffekseerRendererLLGI.RendererImplemented.h>
 

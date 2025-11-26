@@ -86,7 +86,7 @@ if (BUILD_DX12 OR BUILD_METAL OR BUILD_VULKAN)
         set(GLSLANG_INCLUDE_DIR "${GLSLANG_INCLUDE_DIR}" CACHE STRING "For LLGI" FORCE)
     endif()
 
-    add_subdirectory(3rdParty/LLGI)
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../../Dev/Cpp/3rdParty/LLGI ${CMAKE_CURRENT_BINARY_DIR}/LLGI)
     set_target_properties (LLGI PROPERTIES FOLDER Thirdparty)
     set(BUILD_TEST ${BUILD_TEST_TEMP})
 
